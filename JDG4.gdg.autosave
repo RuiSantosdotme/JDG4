@@ -87,7 +87,7 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="59.000000" layer="" locked="false" name="Wall" width="798.000000" x="0.000000" y="0.000000" zOrder="2">
+                <instance angle="0.000000" customSize="true" height="44.000000" layer="" locked="false" name="Wall" width="798.000000" x="-0.999985" y="1.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -423,7 +423,16 @@
                             <subConditions />
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SeparateFromObjects" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>Wall</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
                     <events />
                 </event>
             </events>
