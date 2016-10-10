@@ -62,28 +62,13 @@
             <resource alwaysLoaded="false" file="PlayerMovement/1_front.png" kind="image" name="1_front.png3" smoothed="true" userAdded="false" />
             <resource alwaysLoaded="false" file="PlayerMovement/2_front.png" kind="image" name="2_front.png3" smoothed="true" userAdded="false" />
             <resource alwaysLoaded="false" file="PlayerMovement/3_front.png" kind="image" name="3_front.png3" smoothed="true" userAdded="false" />
-            <resource alwaysLoaded="false" file="Background/0_table.png" kind="image" name="0_table.png" smoothed="true" userAdded="false" />
-            <resource alwaysLoaded="false" file="Background/1_table.png" kind="image" name="1_table.png" smoothed="true" userAdded="false" />
-            <resource alwaysLoaded="false" file="Background/2_table.png" kind="image" name="2_table.png" smoothed="true" userAdded="false" />
-            <resource alwaysLoaded="false" file="Background/3_table.png" kind="image" name="3_table.png" smoothed="true" userAdded="false" />
-            <resource alwaysLoaded="false" file="Background/4_table.png" kind="image" name="4_table.png" smoothed="true" userAdded="false" />
-            <resource alwaysLoaded="false" file="Background/5_table.png" kind="image" name="5_table.png" smoothed="true" userAdded="false" />
-            <resource alwaysLoaded="false" file="Background/Limit.png" kind="image" name="Limit.png" smoothed="true" userAdded="false" />
-            <resource alwaysLoaded="false" file="Background/Main.png" kind="image" name="Main.png" smoothed="true" userAdded="false" />
-            <resource alwaysLoaded="false" file="Background/floor.png" kind="image" name="floor.png" smoothed="true" userAdded="false" />
-            <resource alwaysLoaded="false" file="Background/window.png" kind="image" name="window.png" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="floor.jpg" kind="image" name="floor.jpg" smoothed="true" userAdded="false" />
             <resource alwaysLoaded="false" file="Background/Background.jpg" kind="image" name="Background.jpg" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="Background/Limit.png" kind="image" name="Limit.png" smoothed="true" userAdded="true" />
         </resources>
         <resourceFolders />
     </resources>
-    <objects>
-        <object height="32.000000" name="Wall" texture="Limit.png" type="TiledSpriteObject::TiledSprite" width="32.000000">
-            <variables />
-            <behaviors>
-                <behavior cost="0.000000" impassable="true" name="Wall" type="PathfindingBehavior::PathfindingObstacleBehavior" />
-            </behaviors>
-        </object>
-    </objects>
+    <objects />
     <objectsGroups />
     <variables />
     <layouts>
@@ -97,12 +82,12 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="423.000000" layer="" locked="false" name="Wall" width="32.000000" x="0.000000" y="0.000000" zOrder="1">
+                <instance angle="0.000000" customSize="true" height="595.000000" layer="" locked="true" name="Floor" width="796.000000" x="0.000000" y="0.000000" zOrder="-3">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Table" width="0.000000" x="331.500000" y="382.500000" zOrder="2">
+                <instance angle="0.000000" customSize="true" height="59.000000" layer="" locked="false" name="Wall" width="798.000000" x="0.000000" y="0.000000" zOrder="2">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -112,7 +97,6 @@
                 <object name="Player" type="Sprite">
                     <variables />
                     <behaviors>
-                        <behavior acceleration="400.000000" allowDiagonals="false" angleOffset="0.000000" angularMaxSpeed="180.000000" cellHeight="20" cellWidth="20" extraBorder="0.000000" maxSpeed="200.000000" name="Pathfinding" rotateObject="true" type="PathfindingBehavior::PathfindingBehavior" />
                         <behavior acceleration="400.000000" allowDiagonals="false" angleOffset="0.000000" angularMaxSpeed="180.000000" deceleration="800.000000" ignoreDefaultControls="false" maxSpeed="200.000000" name="TopDownMovement" rotateObject="true" type="TopDownMovementBehavior::TopDownMovementBehavior" />
                     </behaviors>
                     <animations>
@@ -363,44 +347,20 @@
                     <behaviors>
                         <behavior acceleration="400.000000" allowDiagonals="true" angleOffset="0.000000" angularMaxSpeed="180.000000" deceleration="800.000000" ignoreDefaultControls="false" maxSpeed="200.000000" name="TopDownMovement" rotateObject="true" type="TopDownMovementBehavior::TopDownMovementBehavior" />
                     </behaviors>
-                    <animations>
-                        <animation name="" useMultipleDirections="false">
-                            <directions>
-                                <direction looping="false" timeBetweenFrames="1.000000">
-                                    <sprites />
-                                </direction>
-                            </directions>
-                        </animation>
-                    </animations>
+                    <animations />
                 </object>
                 <object name="Table" type="Sprite">
                     <variables />
-                    <behaviors>
-                        <behavior cost="2.000000" impassable="true" name="PathfindingObstacle" type="PathfindingBehavior::PathfindingObstacleBehavior" />
-                    </behaviors>
-                    <animations>
-                        <animation name="" useMultipleDirections="false">
-                            <directions>
-                                <direction looping="false" timeBetweenFrames="1.000000">
-                                    <sprites>
-                                        <sprite hasCustomCollisionMask="false" image="5_table.png">
-                                            <points />
-                                            <originPoint name="origine" x="0.000000" y="0.000000" />
-                                            <centerPoint automatic="true" name="centre" x="32.000000" y="23.000000" />
-                                            <customCollisionMask>
-                                                <polygon>
-                                                    <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="64.000000" y="0.000000" />
-                                                    <vertice x="64.000000" y="46.000000" />
-                                                    <vertice x="0.000000" y="46.000000" />
-                                                </polygon>
-                                            </customCollisionMask>
-                                        </sprite>
-                                    </sprites>
-                                </direction>
-                            </directions>
-                        </animation>
-                    </animations>
+                    <behaviors />
+                    <animations />
+                </object>
+                <object height="32.000000" name="Floor" texture="Background.jpg" type="TiledSpriteObject::TiledSprite" width="32.000000">
+                    <variables />
+                    <behaviors />
+                </object>
+                <object height="32.000000" name="Wall" texture="Limit.png" type="TiledSpriteObject::TiledSprite" width="32.000000">
+                    <variables />
+                    <behaviors />
                 </object>
             </objects>
             <events>
@@ -456,30 +416,13 @@
                             <type inverted="false" value="CollisionNP" />
                             <parameters>
                                 <parameter>Player</parameter>
-                                <parameter>Table</parameter>
+                                <parameter>Wall</parameter>
                                 <parameter></parameter>
                                 <parameter></parameter>
                             </parameters>
                             <subConditions />
                         </condition>
                     </conditions>
-                    <actions>
-                        <action>
-                            <type inverted="false" value="TopDownMovementBehavior::Deceleration" />
-                            <parameters>
-                                <parameter>Player</parameter>
-                                <parameter>TopDownMovement</parameter>
-                                <parameter>=</parameter>
-                                <parameter>0</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                    </actions>
-                    <events />
-                </event>
-                <event disabled="false" folded="false">
-                    <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions />
                     <actions />
                     <events />
                 </event>
@@ -493,10 +436,8 @@
                 </layer>
             </layers>
             <behaviorsSharedData>
-                <behaviorSharedData name="Pathfinding" type="PathfindingBehavior::PathfindingBehavior" />
                 <behaviorSharedData name="PathfindingObstacle" type="PathfindingBehavior::PathfindingObstacleBehavior" />
                 <behaviorSharedData name="TopDownMovement" type="TopDownMovementBehavior::TopDownMovementBehavior" />
-                <behaviorSharedData name="Wall" type="PathfindingBehavior::PathfindingObstacleBehavior" />
             </behaviorsSharedData>
         </layout>
     </layouts>

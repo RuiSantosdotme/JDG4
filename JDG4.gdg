@@ -32,6 +32,7 @@
             <extension name="BuiltinExternalLayouts" />
             <extension name="TopDownMovementBehavior" />
             <extension name="PathfindingBehavior" />
+            <extension name="TiledSpriteObject" />
         </extensions>
         <platforms>
             <platform name="GDevelop JS platform" />
@@ -62,6 +63,8 @@
             <resource alwaysLoaded="false" file="PlayerMovement/2_front.png" kind="image" name="2_front.png3" smoothed="true" userAdded="false" />
             <resource alwaysLoaded="false" file="PlayerMovement/3_front.png" kind="image" name="3_front.png3" smoothed="true" userAdded="false" />
             <resource alwaysLoaded="false" file="floor.jpg" kind="image" name="floor.jpg" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="Background/Background.jpg" kind="image" name="Background.jpg" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="Background/Limit.png" kind="image" name="Limit.png" smoothed="true" userAdded="true" />
         </resources>
         <resourceFolders />
     </resources>
@@ -74,47 +77,23 @@
             <objectsGroups />
             <variables />
             <instances>
-                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Floor" width="0.000000" x="0.000000" y="0.000000" zOrder="-3">
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Player" width="0.000000" x="381.500000" y="254.500031" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Player" width="0.000000" x="381.500000" y="254.500031" zOrder="1">
+                <instance angle="0.000000" customSize="true" height="595.000000" layer="" locked="true" name="Floor" width="796.000000" x="0.000000" y="0.000000" zOrder="-3">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="true" height="59.000000" layer="" locked="false" name="Wall" width="798.000000" x="0.000000" y="0.000000" zOrder="2">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
             </instances>
             <objects>
-                <object name="Floor" type="Sprite">
-                    <variables />
-                    <behaviors>
-                        <behavior cost="2.000000" impassable="true" name="PathfindingObstacle" type="PathfindingBehavior::PathfindingObstacleBehavior" />
-                    </behaviors>
-                    <animations>
-                        <animation name="" useMultipleDirections="false">
-                            <directions>
-                                <direction looping="false" timeBetweenFrames="1.000000">
-                                    <sprites>
-                                        <sprite hasCustomCollisionMask="false" image="floor.jpg">
-                                            <points />
-                                            <originPoint name="origine" x="0.000000" y="0.000000" />
-                                            <centerPoint automatic="true" name="centre" x="840.000000" y="525.000000" />
-                                            <customCollisionMask>
-                                                <polygon>
-                                                    <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="1680.000000" y="0.000000" />
-                                                    <vertice x="1680.000000" y="1050.000000" />
-                                                    <vertice x="0.000000" y="1050.000000" />
-                                                </polygon>
-                                            </customCollisionMask>
-                                        </sprite>
-                                    </sprites>
-                                </direction>
-                            </directions>
-                        </animation>
-                    </animations>
-                </object>
                 <object name="Player" type="Sprite">
                     <variables />
                     <behaviors>
@@ -370,15 +349,18 @@
                     </behaviors>
                     <animations />
                 </object>
-                <object name="Wall" type="Sprite">
-                    <variables />
-                    <behaviors />
-                    <animations />
-                </object>
                 <object name="Table" type="Sprite">
                     <variables />
                     <behaviors />
                     <animations />
+                </object>
+                <object height="32.000000" name="Floor" texture="Background.jpg" type="TiledSpriteObject::TiledSprite" width="32.000000">
+                    <variables />
+                    <behaviors />
+                </object>
+                <object height="32.000000" name="Wall" texture="Limit.png" type="TiledSpriteObject::TiledSprite" width="32.000000">
+                    <variables />
+                    <behaviors />
                 </object>
             </objects>
             <events>
@@ -441,15 +423,7 @@
                             <subConditions />
                         </condition>
                     </conditions>
-                    <actions>
-                        <action>
-                            <type inverted="false" value="Arreter" />
-                            <parameters>
-                                <parameter>Player</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                    </actions>
+                    <actions />
                     <events />
                 </event>
             </events>
