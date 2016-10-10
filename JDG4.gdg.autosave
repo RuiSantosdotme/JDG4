@@ -99,6 +99,10 @@
             <resource alwaysLoaded="false" file="PlayerMovement/1_front.png" kind="image" name="1_front.png4" smoothed="true" userAdded="false" />
             <resource alwaysLoaded="false" file="PlayerMovement/2_front.png" kind="image" name="2_front.png4" smoothed="true" userAdded="false" />
             <resource alwaysLoaded="false" file="PlayerMovement/3_front.png" kind="image" name="3_front.png4" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="Background/1_table.png" kind="image" name="1_table.png" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="Background/2_table.png" kind="image" name="2_table.png2" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="Background/4_table.png" kind="image" name="4_table.png" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="Background/floor.png" kind="image" name="floor.png" smoothed="true" userAdded="true" />
         </resources>
         <resourceFolders />
     </resources>
@@ -111,12 +115,12 @@
             <objectsGroups />
             <variables />
             <instances>
-                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Player" width="0.000000" x="94.500000" y="80.500031" zOrder="1">
+                <instance angle="0.000000" customSize="true" height="35.000000" layer="" locked="false" name="Player" width="21.999985" x="105.500015" y="109.500031" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="594.000000" layer="" locked="true" name="Floor" width="798.999878" x="0.000000" y="0.000000" zOrder="-3">
+                <instance angle="0.000000" customSize="true" height="535.000000" layer="" locked="true" name="Floor" width="766.000000" x="31.999979" y="35.000000" zOrder="-3">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -142,6 +146,26 @@
                     <initialVariables />
                 </instance>
                 <instance angle="0.000000" customSize="true" height="598.000000" layer="" locked="true" name="Wall" width="32.000000" x="-0.000036" y="1.000000" zOrder="1">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="true" height="108.000000" layer="" locked="true" name="Table2" width="127.000000" x="392.000000" y="351.500000" zOrder="1">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="true" height="114.000000" layer="" locked="true" name="Table3" width="61.000000" x="578.000000" y="118.500000" zOrder="1">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="true" height="77.000000" layer="" locked="true" name="Table" width="27.000015" x="189.000000" y="123.500000" zOrder="1">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="true" height="75.000000" layer="" locked="true" name="Table" width="57.000000" x="138.000000" y="261.500000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -396,7 +420,7 @@
                         </animation>
                     </animations>
                 </object>
-                <object name="Enemy" type="Sprite">
+                <object name="Bot" type="Sprite">
                     <variables />
                     <behaviors>
                         <behavior acceleration="400.000000" allowDiagonals="true" angleOffset="0.000000" angularMaxSpeed="180.000000" cellHeight="20" cellWidth="20" extraBorder="0.000000" maxSpeed="200.000000" name="Pathfinding" rotateObject="true" type="PathfindingBehavior::PathfindingBehavior" />
@@ -406,55 +430,55 @@
                             <directions>
                                 <direction looping="false" timeBetweenFrames="1.000000">
                                     <sprites>
-                                        <sprite hasCustomCollisionMask="false" image="0_right.png3">
+                                        <sprite hasCustomCollisionMask="true" image="0_right.png3">
                                             <points />
                                             <originPoint name="origine" x="0.000000" y="0.000000" />
                                             <centerPoint automatic="true" name="centre" x="16.500000" y="32.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="33.000000" y="0.000000" />
-                                                    <vertice x="33.000000" y="64.000000" />
-                                                    <vertice x="0.000000" y="64.000000" />
+                                                    <vertice x="16.500000" y="32.000000" />
+                                                    <vertice x="16.500000" y="32.000000" />
+                                                    <vertice x="16.500000" y="32.000000" />
+                                                    <vertice x="16.500000" y="32.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
-                                        <sprite hasCustomCollisionMask="false" image="1_right.png3">
+                                        <sprite hasCustomCollisionMask="true" image="1_right.png3">
                                             <points />
                                             <originPoint name="origine" x="0.000000" y="0.000000" />
                                             <centerPoint automatic="true" name="centre" x="15.000000" y="32.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="30.000000" y="0.000000" />
-                                                    <vertice x="30.000000" y="64.000000" />
-                                                    <vertice x="0.000000" y="64.000000" />
+                                                    <vertice x="16.500000" y="32.000000" />
+                                                    <vertice x="16.500000" y="32.000000" />
+                                                    <vertice x="16.500000" y="32.000000" />
+                                                    <vertice x="16.500000" y="32.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
-                                        <sprite hasCustomCollisionMask="false" image="2_right.png3">
+                                        <sprite hasCustomCollisionMask="true" image="2_right.png3">
                                             <points />
                                             <originPoint name="origine" x="0.000000" y="0.000000" />
                                             <centerPoint automatic="true" name="centre" x="16.000000" y="32.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="32.000000" y="0.000000" />
-                                                    <vertice x="32.000000" y="64.000000" />
-                                                    <vertice x="0.000000" y="64.000000" />
+                                                    <vertice x="16.500000" y="32.000000" />
+                                                    <vertice x="16.500000" y="32.000000" />
+                                                    <vertice x="16.500000" y="32.000000" />
+                                                    <vertice x="16.500000" y="32.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
-                                        <sprite hasCustomCollisionMask="false" image="3_right.png3">
+                                        <sprite hasCustomCollisionMask="true" image="3_right.png3">
                                             <points />
                                             <originPoint name="origine" x="0.000000" y="0.000000" />
                                             <centerPoint automatic="true" name="centre" x="15.000000" y="32.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="30.000000" y="0.000000" />
-                                                    <vertice x="30.000000" y="64.000000" />
-                                                    <vertice x="0.000000" y="64.000000" />
+                                                    <vertice x="16.500000" y="32.000000" />
+                                                    <vertice x="16.500000" y="32.000000" />
+                                                    <vertice x="16.500000" y="32.000000" />
+                                                    <vertice x="16.500000" y="32.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -644,12 +668,7 @@
                         </animation>
                     </animations>
                 </object>
-                <object name="Table" type="Sprite">
-                    <variables />
-                    <behaviors />
-                    <animations />
-                </object>
-                <object height="32.000000" name="Floor" texture="Background.jpg" type="TiledSpriteObject::TiledSprite" width="32.000000">
+                <object height="32.000000" name="Floor" texture="floor.png" type="TiledSpriteObject::TiledSprite" width="32.000000">
                     <variables />
                     <behaviors />
                 </object>
@@ -661,6 +680,31 @@
                         <behavior cost="2.000000" impassable="true" name="PathfindingObstacle3" type="PathfindingBehavior::PathfindingObstacleBehavior" />
                         <behavior cost="2.000000" impassable="true" name="PathfindingObstacle4" type="PathfindingBehavior::PathfindingObstacleBehavior" />
                         <behavior cost="2.000000" impassable="true" name="PathfindingObstacle5" type="PathfindingBehavior::PathfindingObstacleBehavior" />
+                    </behaviors>
+                </object>
+                <object name="Enemy" type="Sprite">
+                    <variables />
+                    <behaviors>
+                        <behavior acceleration="400.000000" allowDiagonals="false" angleOffset="0.000000" angularMaxSpeed="180.000000" deceleration="800.000000" ignoreDefaultControls="false" maxSpeed="200.000000" name="TopDownMovement" rotateObject="true" type="TopDownMovementBehavior::TopDownMovementBehavior" />
+                    </behaviors>
+                    <animations />
+                </object>
+                <object height="32.000000" name="Table2" texture="2_table.png2" type="TiledSpriteObject::TiledSprite" width="32.000000">
+                    <variables />
+                    <behaviors>
+                        <behavior cost="1.000000" impassable="true" name="PathfindingObstacle" type="PathfindingBehavior::PathfindingObstacleBehavior" />
+                    </behaviors>
+                </object>
+                <object height="32.000000" name="Table3" texture="4_table.png" type="TiledSpriteObject::TiledSprite" width="32.000000">
+                    <variables />
+                    <behaviors>
+                        <behavior cost="1.000000" impassable="true" name="PathfindingObstacle" type="PathfindingBehavior::PathfindingObstacleBehavior" />
+                    </behaviors>
+                </object>
+                <object height="32.000000" name="Table" texture="1_table.png" type="TiledSpriteObject::TiledSprite" width="32.000000">
+                    <variables />
+                    <behaviors>
+                        <behavior cost="1.000000" impassable="true" name="PathfindingObstacle" type="PathfindingBehavior::PathfindingObstacleBehavior" />
                     </behaviors>
                 </object>
             </objects>
@@ -762,7 +806,7 @@
                             <type inverted="false" value="Create" />
                             <parameters>
                                 <parameter></parameter>
-                                <parameter>Enemy</parameter>
+                                <parameter>Bot</parameter>
                                 <parameter>920</parameter>
                                 <parameter>290</parameter>
                                 <parameter></parameter>
@@ -778,7 +822,7 @@
                         <condition>
                             <type inverted="false" value="NbObjet" />
                             <parameters>
-                                <parameter>Enemy</parameter>
+                                <parameter>Bot</parameter>
                                 <parameter>&lt;=</parameter>
                                 <parameter>5</parameter>
                             </parameters>
@@ -789,7 +833,7 @@
                         <action>
                             <type inverted="false" value="PathfindingBehavior::SetDestination" />
                             <parameters>
-                                <parameter>Enemy</parameter>
+                                <parameter>Bot</parameter>
                                 <parameter>Pathfinding</parameter>
                                 <parameter></parameter>
                                 <parameter>Player.X()</parameter>
@@ -806,7 +850,7 @@
                         <condition>
                             <type inverted="false" value="CollisionNP" />
                             <parameters>
-                                <parameter>Enemy</parameter>
+                                <parameter>Bot</parameter>
                                 <parameter>Player</parameter>
                                 <parameter></parameter>
                                 <parameter></parameter>
@@ -818,7 +862,7 @@
                         <action>
                             <type inverted="false" value="Arreter" />
                             <parameters>
-                                <parameter>Enemy</parameter>
+                                <parameter>Bot</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -831,7 +875,7 @@
                         <condition>
                             <type inverted="false" value="Arret" />
                             <parameters>
-                                <parameter>Enemy</parameter>
+                                <parameter>Bot</parameter>
                             </parameters>
                             <subConditions />
                         </condition>
@@ -840,7 +884,7 @@
                         <action>
                             <type inverted="false" value="PauseAnimation" />
                             <parameters>
-                                <parameter>Enemy</parameter>
+                                <parameter>Bot</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -849,8 +893,80 @@
                 </event>
                 <event disabled="false" folded="false">
                     <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>Table2</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SeparateFromObjects" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>Table2</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>Table</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SeparateFromObjects" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>Table</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>Table3</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SeparateFromObjects" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>Table3</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
                     <events />
                 </event>
             </events>
