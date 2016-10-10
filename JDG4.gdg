@@ -87,27 +87,27 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="32.000000" layer="" locked="true" name="Wall" width="799.000000" x="0.000142" y="0.999990" zOrder="2">
+                <instance angle="0.000000" customSize="true" height="32.000000" layer="" locked="true" name="Wall" width="799.000000" x="0.000142" y="0.999990" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="235.000000" layer="" locked="true" name="Wall" width="32.000000" x="767.000061" y="2.000007" zOrder="3">
+                <instance angle="0.000000" customSize="true" height="235.000000" layer="" locked="true" name="Wall" width="32.000000" x="767.000061" y="2.000007" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="296.000000" layer="" locked="true" name="Wall" width="32.000000" x="767.000122" y="303.000000" zOrder="4">
+                <instance angle="0.000000" customSize="true" height="296.000000" layer="" locked="true" name="Wall" width="32.000000" x="767.000122" y="303.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="32.000000" layer="" locked="true" name="Wall" width="799.000061" x="0.000085" y="568.000000" zOrder="5">
+                <instance angle="0.000000" customSize="true" height="32.000000" layer="" locked="true" name="Wall" width="799.000061" x="0.000085" y="568.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="598.000000" layer="" locked="true" name="Wall" width="32.000000" x="-0.000036" y="1.000000" zOrder="6">
+                <instance angle="0.000000" customSize="true" height="598.000000" layer="" locked="true" name="Wall" width="32.000000" x="-0.000036" y="1.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
