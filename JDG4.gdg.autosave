@@ -153,12 +153,12 @@
     <objectsGroups />
     <variables />
     <layouts>
-        <layout b="209" disableInputWhenNotFocused="true" mangledName="Base_32Level" name="Base Level" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
-            <uiSettings grid="true" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="1.500000" />
+        <layout b="209" disableInputWhenNotFocused="true" mangledName="Sala_32lvl1" name="Sala lvl1" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
+            <uiSettings grid="true" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="1.000000" />
             <objectsGroups />
             <variables />
             <instances>
-                <instance angle="0.000000" customSize="true" height="35.000000" layer="" locked="false" name="Player" width="21.999985" x="96.000000" y="288.000000" zOrder="1">
+                <instance angle="0.000000" customSize="true" height="35.000000" layer="" locked="false" name="Player" width="21.999985" x="96.000000" y="160.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -168,22 +168,22 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="192.000000" layer="" locked="false" name="Wall" width="32.000000" x="767.000061" y="33.333340" zOrder="1">
+                <instance angle="0.000000" customSize="true" height="192.000000" layer="" locked="true" name="Wall" width="32.000000" x="767.000061" y="33.333340" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="262.000000" layer="" locked="true" name="Wall" width="32.000000" x="767.000122" y="337.000000" zOrder="1">
+                <instance angle="0.000000" customSize="true" height="256.000000" layer="" locked="true" name="Wall" width="32.000000" x="767.000122" y="352.333344" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="64.000000" layer="" locked="false" name="Wall" width="799.000061" x="0.000085" y="543.333252" zOrder="1">
+                <instance angle="0.000000" customSize="true" height="64.000000" layer="" locked="true" name="Wall" width="799.000061" x="0.000000" y="544.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="50.000000" layer="" locked="false" name="Table2" width="56.000000" x="361.000000" y="160.000000" zOrder="1">
+                <instance angle="0.000000" customSize="true" height="60.000000" layer="" locked="false" name="Table2" width="56.000000" x="360.000000" y="160.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -208,7 +208,7 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="416.000000" layer="" locked="false" name="Wall_lights" width="64.000000" x="0.000000" y="128.000000" zOrder="1">
+                <instance angle="0.000000" customSize="true" height="416.000000" layer="" locked="true" name="Wall_lights" width="64.000000" x="0.000000" y="128.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -258,7 +258,7 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="50.000000" layer="" locked="false" name="Table2" width="56.000000" x="412.000000" y="160.000000" zOrder="1">
+                <instance angle="0.000000" customSize="true" height="60.000000" layer="" locked="false" name="Table2" width="56.000000" x="410.000000" y="160.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -283,17 +283,17 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="128.000000" layer="" locked="false" name="Wall" width="800.000000" x="0.000000" y="0.000000" zOrder="3">
+                <instance angle="0.000000" customSize="true" height="128.000000" layer="" locked="true" name="Wall" width="800.000000" x="0.000000" y="0.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="CopyOfWall" width="0.000000" x="352.000000" y="0.000000" zOrder="4">
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="true" name="CopyOfWall" width="0.000000" x="352.000000" y="0.000000" zOrder="4">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Enemy" width="0.000000" x="672.000000" y="416.000000" zOrder="5">
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Enemy" width="0.000000" x="96.000000" y="448.000000" zOrder="5">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -304,6 +304,11 @@
                     <initialVariables />
                 </instance>
                 <instance angle="0.000000" customSize="true" height="75.000000" layer="" locked="false" name="Table" width="27.000000" x="567.666687" y="316.000000" zOrder="2">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Bot" width="0.000000" x="672.000000" y="192.000000" zOrder="6">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -2525,6 +2530,51 @@
                             <parameters>
                                 <parameter>Enemy</parameter>
                                 <parameter>Table3</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="TopDownMovementBehavior::IsMoving" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>TopDownMovement</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="Arret" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="PauseAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
                             </parameters>
                             <subActions />
                         </action>
