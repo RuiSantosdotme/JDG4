@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project firstLayout="">
-    <gdVersion build="92" major="4" minor="0" revision="1" />
+    <gdVersion build="92" major="4" minor="0" revision="0" />
     <properties folderProject="false" linuxExecutableFilename="" macExecutableFilename="" packageName="com.example.gamename" useExternalSourceFiles="false" winExecutableFilename="" winExecutableIconFile="">
         <name>Project</name>
         <author></author>
@@ -112,7 +112,7 @@
             <resource alwaysLoaded="false" file="sprites/ghost blu decompose/ghostbluel0c3.png" kind="image" name="ghostbluel0c3.png" smoothed="true" userAdded="true" />
             <resource alwaysLoaded="false" file="sprites/ghost blu decompose/ghostbluel0c4.png" kind="image" name="ghostbluel0c4.png" smoothed="true" userAdded="true" />
             <resource alwaysLoaded="false" file="sprites/ghost blu decompose/ghostbluel1c0.png" kind="image" name="ghostbluel1c0.png" smoothed="true" userAdded="true" />
-            <resource alwaysLoaded="false" file="../sprites/ghost blu decompose/ghostbluel1c1.png" kind="image" name="ghostbluel1c1.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="sprites/ghost blu decompose/ghostbluel1c1.png" kind="image" name="ghostbluel1c1.png" smoothed="true" userAdded="true" />
             <resource alwaysLoaded="false" file="sprites/ghost blu decompose/ghostbluel1c2.png" kind="image" name="ghostbluel1c2.png" smoothed="true" userAdded="true" />
             <resource alwaysLoaded="false" file="sprites/ghost blu decompose/ghostbluel1c3.png" kind="image" name="ghostbluel1c3.png" smoothed="true" userAdded="true" />
             <resource alwaysLoaded="false" file="sprites/ghost blu decompose/ghostbluel1c4.png" kind="image" name="ghostbluel1c4.png" smoothed="true" userAdded="true" />
@@ -289,6 +289,11 @@
                     <initialVariables />
                 </instance>
                 <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="CopyOfWall" width="0.000000" x="352.000000" y="0.000000" zOrder="4">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Enemy" width="0.000000" x="672.000000" y="416.000000" zOrder="5">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -2284,6 +2289,30 @@
                             <parameters>
                                 <parameter>Player</parameter>
                                 <parameter>Table3</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="KeyPressed" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>w</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="TopDownMovementBehavior::SimulateUpKey" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>TopDownMovement</parameter>
                             </parameters>
                             <subActions />
                         </action>
