@@ -308,11 +308,6 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Bot" width="0.000000" x="672.000000" y="192.000000" zOrder="6">
-                    <numberProperties />
-                    <stringProperties />
-                    <initialVariables />
-                </instance>
             </instances>
             <objects>
                 <object name="Player" type="Sprite">
@@ -2110,6 +2105,15 @@
                             </parameters>
                             <subConditions />
                         </condition>
+                        <condition>
+                            <type inverted="false" value="NbObjet" />
+                            <parameters>
+                                <parameter>Bot</parameter>
+                                <parameter>&lt;=</parameter>
+                                <parameter>5</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
                     </conditions>
                     <actions>
                         <action>
@@ -2331,6 +2335,13 @@
                             </parameters>
                             <subActions />
                         </action>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
                     </actions>
                     <events />
                 </event>
@@ -2352,6 +2363,13 @@
                             <parameters>
                                 <parameter>Enemy</parameter>
                                 <parameter>TopDownMovement</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -2379,6 +2397,13 @@
                             </parameters>
                             <subActions />
                         </action>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
                     </actions>
                     <events />
                 </event>
@@ -2403,152 +2428,6 @@
                             </parameters>
                             <subActions />
                         </action>
-                    </actions>
-                    <events />
-                </event>
-                <event disabled="false" folded="false">
-                    <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions>
-                        <condition>
-                            <type inverted="false" value="CollisionNP" />
-                            <parameters>
-                                <parameter>Enemy</parameter>
-                                <parameter>Wall</parameter>
-                                <parameter></parameter>
-                                <parameter></parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action>
-                            <type inverted="false" value="SeparateFromObjects" />
-                            <parameters>
-                                <parameter>Enemy</parameter>
-                                <parameter>Wall</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                    </actions>
-                    <events />
-                </event>
-                <event disabled="false" folded="false">
-                    <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions>
-                        <condition>
-                            <type inverted="false" value="CollisionNP" />
-                            <parameters>
-                                <parameter>Enemy</parameter>
-                                <parameter>Wall_lights</parameter>
-                                <parameter></parameter>
-                                <parameter></parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action>
-                            <type inverted="false" value="SeparateFromObjects" />
-                            <parameters>
-                                <parameter>Enemy</parameter>
-                                <parameter>Wall_lights</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                    </actions>
-                    <events />
-                </event>
-                <event disabled="false" folded="false">
-                    <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions>
-                        <condition>
-                            <type inverted="false" value="CollisionNP" />
-                            <parameters>
-                                <parameter>Enemy</parameter>
-                                <parameter>Table</parameter>
-                                <parameter></parameter>
-                                <parameter></parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action>
-                            <type inverted="false" value="SeparateFromObjects" />
-                            <parameters>
-                                <parameter>Enemy</parameter>
-                                <parameter>Table</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                    </actions>
-                    <events />
-                </event>
-                <event disabled="false" folded="false">
-                    <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions>
-                        <condition>
-                            <type inverted="false" value="CollisionNP" />
-                            <parameters>
-                                <parameter>Enemy</parameter>
-                                <parameter>Table2</parameter>
-                                <parameter></parameter>
-                                <parameter></parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action>
-                            <type inverted="false" value="SeparateFromObjects" />
-                            <parameters>
-                                <parameter>Enemy</parameter>
-                                <parameter>Table2</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                    </actions>
-                    <events />
-                </event>
-                <event disabled="false" folded="false">
-                    <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions>
-                        <condition>
-                            <type inverted="false" value="CollisionNP" />
-                            <parameters>
-                                <parameter>Enemy</parameter>
-                                <parameter>Table3</parameter>
-                                <parameter></parameter>
-                                <parameter></parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action>
-                            <type inverted="false" value="SeparateFromObjects" />
-                            <parameters>
-                                <parameter>Enemy</parameter>
-                                <parameter>Table3</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                    </actions>
-                    <events />
-                </event>
-                <event disabled="false" folded="false">
-                    <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions>
-                        <condition>
-                            <type inverted="false" value="TopDownMovementBehavior::IsMoving" />
-                            <parameters>
-                                <parameter>Enemy</parameter>
-                                <parameter>TopDownMovement</parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                    </conditions>
-                    <actions>
                         <action>
                             <type inverted="false" value="PlayAnimation" />
                             <parameters>
@@ -2563,9 +2442,140 @@
                     <type>BuiltinCommonInstructions::Standard</type>
                     <conditions>
                         <condition>
-                            <type inverted="false" value="Arret" />
+                            <type inverted="false" value="CollisionNP" />
                             <parameters>
                                 <parameter>Enemy</parameter>
+                                <parameter>Wall</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SeparateFromObjects" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Wall</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Wall_lights</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SeparateFromObjects" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Wall_lights</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Table</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SeparateFromObjects" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Table</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Table2</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SeparateFromObjects" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Table2</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Table3</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SeparateFromObjects" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Table3</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="true" value="KeyPressed" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>w</parameter>
                             </parameters>
                             <subConditions />
                         </condition>
@@ -2579,6 +2589,81 @@
                             <subActions />
                         </action>
                     </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="true" value="KeyPressed" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>a</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="PauseAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="true" value="KeyPressed" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>s</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="PauseAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="true" value="KeyPressed" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>d</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="PauseAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions />
+                    <actions />
                     <events />
                 </event>
             </events>
