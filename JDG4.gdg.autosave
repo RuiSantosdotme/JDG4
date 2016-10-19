@@ -272,7 +272,9 @@
     </resources>
     <objects />
     <objectsGroups />
-    <variables />
+    <variables>
+        <variable name="PlayerLife" value="100" />
+    </variables>
     <layouts>
         <layout b="209" disableInputWhenNotFocused="true" mangledName="Sala_32lvl1" name="Sala lvl1" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
             <uiSettings grid="true" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="1.000000" />
@@ -415,6 +417,11 @@
                     <initialVariables />
                 </instance>
                 <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Enemy" width="160.000000" x="96.000000" y="416.000000" zOrder="3">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="PlayerLife" width="0.000000" x="128.000000" y="96.000000" zOrder="4">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -4387,6 +4394,14 @@
                         </animation>
                     </animations>
                 </object>
+                <object bold="false" italic="false" name="PlayerLife" smoothed="true" type="TextObject::Text" underlined="false">
+                    <variables />
+                    <behaviors />
+                    <string>Text</string>
+                    <font></font>
+                    <characterSize>20</characterSize>
+                    <color b="255" g="255" r="255" />
+                </object>
             </objects>
             <events>
                 <event disabled="false" folded="false">
@@ -5245,6 +5260,94 @@
                             <parameters>
                                 <parameter></parameter>
                                 <parameter>&quot;Pause&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="VarGlobal" />
+                            <parameters>
+                                <parameter>PlayerLife</parameter>
+                                <parameter>&gt;=</parameter>
+                                <parameter>100</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarGlobal" />
+                            <parameters>
+                                <parameter>PlayerLife</parameter>
+                                <parameter>=</parameter>
+                                <parameter>100</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="TextObject::String" />
+                            <parameters>
+                                <parameter>PlayerLife</parameter>
+                                <parameter>=</parameter>
+                                <parameter>&quot;Life: &quot;+ToString(round(GlobalVariable(PlayerLife)))</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Bot</parameter>
+                                <parameter>Player</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="Timer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>5</parameter>
+                                <parameter>&quot;BotPlayerCollision&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarGlobal" />
+                            <parameters>
+                                <parameter>PlayerLife</parameter>
+                                <parameter>-</parameter>
+                                <parameter>5</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="TextObject::String" />
+                            <parameters>
+                                <parameter>PlayerLife</parameter>
+                                <parameter>=</parameter>
+                                <parameter>&quot;Life: &quot;+ToString(round(GlobalVariable(PlayerLife)))</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ResetTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;BotPlayerCollision&quot;</parameter>
                             </parameters>
                             <subActions />
                         </action>
