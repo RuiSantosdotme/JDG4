@@ -426,6 +426,11 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="EnemyLife" width="0.000000" x="64.000000" y="64.000000" zOrder="6">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
             </instances>
             <objects>
                 <object name="Player" type="Sprite">
@@ -2721,7 +2726,7 @@
                 <object bold="false" italic="false" name="PlayerLife" smoothed="true" type="TextObject::Text" underlined="false">
                     <variables />
                     <behaviors />
-                    <string>Player HP: </string>
+                    <string>Player HP:</string>
                     <font></font>
                     <characterSize>20</characterSize>
                     <color b="255" g="255" r="255" />
@@ -4962,6 +4967,14 @@
                         </animation>
                     </animations>
                 </object>
+                <object bold="false" italic="false" name="EnemyLife" smoothed="true" type="TextObject::Text" underlined="false">
+                    <variables />
+                    <behaviors />
+                    <string>Enemy HP:</string>
+                    <font></font>
+                    <characterSize>20</characterSize>
+                    <color b="255" g="255" r="255" />
+                </object>
             </objects>
             <events>
                 <event disabled="false" folded="false">
@@ -5906,6 +5919,44 @@
                     <type>BuiltinCommonInstructions::Standard</type>
                     <conditions>
                         <condition>
+                            <type inverted="false" value="KeyReleased" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>p</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="PauseAnimation" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Walk&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
                             <type inverted="false" value="KeyPressed" />
                             <parameters>
                                 <parameter></parameter>
@@ -5927,6 +5978,44 @@
                             <parameters>
                                 <parameter>Enemy</parameter>
                                 <parameter>&quot;Attack&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="KeyReleased" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>Space</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="PauseAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>&quot;Walk&quot;</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -5997,7 +6086,7 @@
                             <parameters>
                                 <parameter>PlayerLife</parameter>
                                 <parameter>=</parameter>
-                                <parameter>&quot;Life: &quot;+ToString(round(GlobalVariable(PlayerLife)))</parameter>
+                                <parameter>&quot;Player HP: &quot;+ToString(round(GlobalVariable(PlayerLife)))</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -6103,34 +6192,126 @@
                     <type>BuiltinCommonInstructions::Standard</type>
                     <conditions>
                         <condition>
-                            <type inverted="false" value="KeyReleased" />
+                            <type inverted="false" value="VarGlobal" />
                             <parameters>
-                                <parameter></parameter>
-                                <parameter>p</parameter>
+                                <parameter>PlayerLife</parameter>
+                                <parameter>&gt;=</parameter>
+                                <parameter>100</parameter>
                             </parameters>
                             <subConditions />
                         </condition>
                     </conditions>
                     <actions>
                         <action>
-                            <type inverted="false" value="PauseAnimation" />
+                            <type inverted="false" value="ModVarGlobal" />
                             <parameters>
-                                <parameter>Player</parameter>
+                                <parameter>EnemyLife</parameter>
+                                <parameter>=</parameter>
+                                <parameter>100</parameter>
                             </parameters>
                             <subActions />
                         </action>
                         <action>
-                            <type inverted="false" value="SetAnimationName" />
+                            <type inverted="false" value="TextObject::String" />
                             <parameters>
-                                <parameter>Player</parameter>
-                                <parameter>&quot;Walk&quot;</parameter>
+                                <parameter>EnemyLife</parameter>
+                                <parameter>=</parameter>
+                                <parameter>&quot;Enemy HP: &quot;+ToString(round(GlobalVariable(PlayerLife)))</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>BotForEnemy</parameter>
+                                <parameter>Enemy</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="Timer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>0.5</parameter>
+                                <parameter>&quot;BotEnemyCollision&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="true" value="AnimationName" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>&quot;Attack&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarGlobal" />
+                            <parameters>
+                                <parameter>EnemyLife</parameter>
+                                <parameter>-</parameter>
+                                <parameter>5</parameter>
                             </parameters>
                             <subActions />
                         </action>
                         <action>
-                            <type inverted="false" value="PlayAnimation" />
+                            <type inverted="false" value="TextObject::String" />
                             <parameters>
-                                <parameter>Player</parameter>
+                                <parameter>EnemyLife</parameter>
+                                <parameter>=</parameter>
+                                <parameter>&quot;Enemy HP: &quot;+ToString(round(GlobalVariable(EnemyLife)))</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ResetTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;BotEnemyCollision&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="AnimationName" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>&quot;Attack&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>BotForEnemy</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="Delete" />
+                            <parameters>
+                                <parameter>BotForEnemy</parameter>
+                                <parameter></parameter>
                             </parameters>
                             <subActions />
                         </action>
