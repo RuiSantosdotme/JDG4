@@ -279,7 +279,7 @@
             <objectsGroups />
             <variables />
             <instances>
-                <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Player" width="160.000000" x="224.000000" y="160.000000" zOrder="1">
+                <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Player" width="160.000000" x="224.000000" y="160.000000" zOrder="3">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -304,27 +304,27 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="60.000000" layer="" locked="false" name="Table2" width="56.000000" x="360.000000" y="160.000000" zOrder="1">
+                <instance angle="0.000000" customSize="true" height="60.000000" layer="" locked="false" name="Table2" width="56.000000" x="358.000000" y="160.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="75.000000" layer="" locked="false" name="Table" width="27.000000" x="128.000000" y="317.000000" zOrder="2">
+                <instance angle="0.000000" customSize="true" height="75.000000" layer="" locked="false" name="Table" width="27.000000" x="128.000000" y="311.000000" zOrder="2">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="75.000000" layer="" locked="false" name="Table" width="28.000000" x="128.000000" y="260.000000" zOrder="1">
+                <instance angle="0.000000" customSize="true" height="75.000000" layer="" locked="false" name="Table" width="28.000000" x="128.000000" y="255.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="75.000000" layer="" locked="false" name="Table" width="27.000000" x="152.000000" y="317.000000" zOrder="2">
+                <instance angle="0.000000" customSize="true" height="75.000000" layer="" locked="false" name="Table" width="27.000000" x="152.000000" y="311.000000" zOrder="2">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="75.000000" layer="" locked="false" name="Table" width="28.000000" x="152.000000" y="260.000000" zOrder="1">
+                <instance angle="0.000000" customSize="true" height="75.000000" layer="" locked="false" name="Table" width="28.000000" x="152.000000" y="255.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -399,7 +399,7 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="true" name="CopyOfWall" width="0.000000" x="352.000000" y="0.000000" zOrder="4">
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="CopyOfWall" width="0.000000" x="352.000000" y="0.000000" zOrder="2">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -438,8 +438,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="226.000000" y="113.000000" />
-                                                    <vertice x="272.000000" y="113.000000" />
-                                                    <vertice x="273.000000" y="175.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
                                                     <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -451,8 +451,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="226.000000" y="113.000000" />
-                                                    <vertice x="272.000000" y="113.000000" />
-                                                    <vertice x="273.000000" y="175.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
                                                     <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -464,8 +464,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="226.000000" y="113.000000" />
-                                                    <vertice x="272.000000" y="113.000000" />
-                                                    <vertice x="273.000000" y="175.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
                                                     <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -477,8 +477,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="226.000000" y="113.000000" />
-                                                    <vertice x="272.000000" y="113.000000" />
-                                                    <vertice x="273.000000" y="175.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
                                                     <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -490,8 +490,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="226.000000" y="113.000000" />
-                                                    <vertice x="272.000000" y="113.000000" />
-                                                    <vertice x="273.000000" y="175.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
                                                     <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -503,8 +503,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="226.000000" y="113.000000" />
-                                                    <vertice x="272.000000" y="113.000000" />
-                                                    <vertice x="273.000000" y="175.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
                                                     <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -516,8 +516,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="226.000000" y="113.000000" />
-                                                    <vertice x="272.000000" y="113.000000" />
-                                                    <vertice x="273.000000" y="175.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
                                                     <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -529,8 +529,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="226.000000" y="113.000000" />
-                                                    <vertice x="272.000000" y="113.000000" />
-                                                    <vertice x="273.000000" y="175.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
                                                     <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -542,8 +542,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="226.000000" y="113.000000" />
-                                                    <vertice x="272.000000" y="113.000000" />
-                                                    <vertice x="273.000000" y="175.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
                                                     <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -555,8 +555,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="226.000000" y="113.000000" />
-                                                    <vertice x="272.000000" y="113.000000" />
-                                                    <vertice x="273.000000" y="175.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
                                                     <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -1242,8 +1242,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="216.000000" y="119.000000" />
-                                                    <vertice x="264.000000" y="123.000000" />
-                                                    <vertice x="262.000000" y="176.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
                                                     <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -1255,8 +1255,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="216.000000" y="119.000000" />
-                                                    <vertice x="264.000000" y="123.000000" />
-                                                    <vertice x="262.000000" y="176.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
                                                     <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -1268,8 +1268,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="216.000000" y="119.000000" />
-                                                    <vertice x="264.000000" y="123.000000" />
-                                                    <vertice x="262.000000" y="176.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
                                                     <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -1281,8 +1281,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="216.000000" y="119.000000" />
-                                                    <vertice x="264.000000" y="123.000000" />
-                                                    <vertice x="262.000000" y="176.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
                                                     <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -1294,8 +1294,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="216.000000" y="119.000000" />
-                                                    <vertice x="264.000000" y="123.000000" />
-                                                    <vertice x="262.000000" y="176.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
                                                     <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -1307,8 +1307,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="216.000000" y="119.000000" />
-                                                    <vertice x="264.000000" y="123.000000" />
-                                                    <vertice x="262.000000" y="176.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
                                                     <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -1320,8 +1320,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="216.000000" y="119.000000" />
-                                                    <vertice x="264.000000" y="123.000000" />
-                                                    <vertice x="262.000000" y="176.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
                                                     <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -1333,8 +1333,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="216.000000" y="119.000000" />
-                                                    <vertice x="264.000000" y="123.000000" />
-                                                    <vertice x="262.000000" y="176.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
                                                     <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -1346,8 +1346,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="216.000000" y="119.000000" />
-                                                    <vertice x="264.000000" y="123.000000" />
-                                                    <vertice x="262.000000" y="176.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
                                                     <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -1359,8 +1359,8 @@
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="216.000000" y="119.000000" />
-                                                    <vertice x="264.000000" y="123.000000" />
-                                                    <vertice x="262.000000" y="176.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
                                                     <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -2727,10 +2727,10 @@
                                             <centerPoint automatic="false" name="centre" x="110.000000" y="63.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="82.000000" y="0.000000" />
-                                                    <vertice x="146.000000" y="1.000000" />
-                                                    <vertice x="146.000000" y="130.000000" />
-                                                    <vertice x="82.000000" y="128.000000" />
+                                                    <vertice x="226.000000" y="113.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
+                                                    <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2740,10 +2740,10 @@
                                             <centerPoint automatic="false" name="centre" x="110.000000" y="63.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="82.000000" y="0.000000" />
-                                                    <vertice x="146.000000" y="1.000000" />
-                                                    <vertice x="146.000000" y="130.000000" />
-                                                    <vertice x="82.000000" y="128.000000" />
+                                                    <vertice x="226.000000" y="113.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
+                                                    <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2753,10 +2753,10 @@
                                             <centerPoint automatic="false" name="centre" x="110.000000" y="63.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="82.000000" y="0.000000" />
-                                                    <vertice x="146.000000" y="1.000000" />
-                                                    <vertice x="146.000000" y="130.000000" />
-                                                    <vertice x="82.000000" y="128.000000" />
+                                                    <vertice x="226.000000" y="113.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
+                                                    <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2766,10 +2766,10 @@
                                             <centerPoint automatic="false" name="centre" x="110.000000" y="63.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="82.000000" y="0.000000" />
-                                                    <vertice x="146.000000" y="1.000000" />
-                                                    <vertice x="146.000000" y="130.000000" />
-                                                    <vertice x="82.000000" y="128.000000" />
+                                                    <vertice x="226.000000" y="113.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
+                                                    <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2779,10 +2779,10 @@
                                             <centerPoint automatic="false" name="centre" x="110.000000" y="63.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="82.000000" y="0.000000" />
-                                                    <vertice x="146.000000" y="1.000000" />
-                                                    <vertice x="146.000000" y="130.000000" />
-                                                    <vertice x="82.000000" y="128.000000" />
+                                                    <vertice x="226.000000" y="113.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
+                                                    <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2792,10 +2792,10 @@
                                             <centerPoint automatic="false" name="centre" x="110.000000" y="63.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="82.000000" y="0.000000" />
-                                                    <vertice x="146.000000" y="1.000000" />
-                                                    <vertice x="146.000000" y="130.000000" />
-                                                    <vertice x="82.000000" y="128.000000" />
+                                                    <vertice x="226.000000" y="113.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
+                                                    <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2805,10 +2805,10 @@
                                             <centerPoint automatic="false" name="centre" x="110.000000" y="63.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="82.000000" y="0.000000" />
-                                                    <vertice x="146.000000" y="1.000000" />
-                                                    <vertice x="146.000000" y="130.000000" />
-                                                    <vertice x="82.000000" y="128.000000" />
+                                                    <vertice x="226.000000" y="113.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
+                                                    <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2818,10 +2818,10 @@
                                             <centerPoint automatic="false" name="centre" x="110.000000" y="63.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="82.000000" y="0.000000" />
-                                                    <vertice x="146.000000" y="1.000000" />
-                                                    <vertice x="146.000000" y="130.000000" />
-                                                    <vertice x="82.000000" y="128.000000" />
+                                                    <vertice x="226.000000" y="113.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
+                                                    <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2831,10 +2831,10 @@
                                             <centerPoint automatic="false" name="centre" x="110.000000" y="63.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="82.000000" y="0.000000" />
-                                                    <vertice x="146.000000" y="1.000000" />
-                                                    <vertice x="146.000000" y="130.000000" />
-                                                    <vertice x="82.000000" y="128.000000" />
+                                                    <vertice x="226.000000" y="113.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
+                                                    <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2844,10 +2844,10 @@
                                             <centerPoint automatic="false" name="centre" x="110.000000" y="63.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="82.000000" y="0.000000" />
-                                                    <vertice x="146.000000" y="1.000000" />
-                                                    <vertice x="146.000000" y="130.000000" />
-                                                    <vertice x="82.000000" y="128.000000" />
+                                                    <vertice x="226.000000" y="113.000000" />
+                                                    <vertice x="269.000000" y="110.000000" />
+                                                    <vertice x="266.000000" y="175.000000" />
+                                                    <vertice x="226.000000" y="175.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2861,10 +2861,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="67.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="86.000000" y="0.000000" />
-                                                    <vertice x="86.000000" y="133.000000" />
-                                                    <vertice x="148.000000" y="134.000000" />
-                                                    <vertice x="147.000000" y="1.000000" />
+                                                    <vertice x="250.000000" y="120.000000" />
+                                                    <vertice x="249.000000" y="182.000000" />
+                                                    <vertice x="303.000000" y="185.000000" />
+                                                    <vertice x="301.000000" y="118.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2874,10 +2874,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="67.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="86.000000" y="0.000000" />
-                                                    <vertice x="86.000000" y="133.000000" />
-                                                    <vertice x="148.000000" y="134.000000" />
-                                                    <vertice x="147.000000" y="1.000000" />
+                                                    <vertice x="250.000000" y="120.000000" />
+                                                    <vertice x="249.000000" y="182.000000" />
+                                                    <vertice x="303.000000" y="185.000000" />
+                                                    <vertice x="301.000000" y="118.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2887,10 +2887,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="67.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="86.000000" y="0.000000" />
-                                                    <vertice x="86.000000" y="133.000000" />
-                                                    <vertice x="148.000000" y="134.000000" />
-                                                    <vertice x="147.000000" y="1.000000" />
+                                                    <vertice x="250.000000" y="120.000000" />
+                                                    <vertice x="249.000000" y="182.000000" />
+                                                    <vertice x="303.000000" y="185.000000" />
+                                                    <vertice x="301.000000" y="118.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2900,10 +2900,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="67.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="86.000000" y="0.000000" />
-                                                    <vertice x="86.000000" y="133.000000" />
-                                                    <vertice x="148.000000" y="134.000000" />
-                                                    <vertice x="147.000000" y="1.000000" />
+                                                    <vertice x="250.000000" y="120.000000" />
+                                                    <vertice x="249.000000" y="182.000000" />
+                                                    <vertice x="303.000000" y="185.000000" />
+                                                    <vertice x="301.000000" y="118.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2913,10 +2913,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="67.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="86.000000" y="0.000000" />
-                                                    <vertice x="86.000000" y="133.000000" />
-                                                    <vertice x="148.000000" y="134.000000" />
-                                                    <vertice x="147.000000" y="1.000000" />
+                                                    <vertice x="250.000000" y="120.000000" />
+                                                    <vertice x="249.000000" y="182.000000" />
+                                                    <vertice x="303.000000" y="185.000000" />
+                                                    <vertice x="301.000000" y="118.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2926,10 +2926,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="67.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="86.000000" y="0.000000" />
-                                                    <vertice x="86.000000" y="133.000000" />
-                                                    <vertice x="148.000000" y="134.000000" />
-                                                    <vertice x="147.000000" y="1.000000" />
+                                                    <vertice x="250.000000" y="120.000000" />
+                                                    <vertice x="249.000000" y="182.000000" />
+                                                    <vertice x="303.000000" y="185.000000" />
+                                                    <vertice x="301.000000" y="118.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2939,10 +2939,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="67.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="86.000000" y="0.000000" />
-                                                    <vertice x="86.000000" y="133.000000" />
-                                                    <vertice x="148.000000" y="134.000000" />
-                                                    <vertice x="147.000000" y="1.000000" />
+                                                    <vertice x="250.000000" y="120.000000" />
+                                                    <vertice x="249.000000" y="182.000000" />
+                                                    <vertice x="303.000000" y="185.000000" />
+                                                    <vertice x="301.000000" y="118.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2952,10 +2952,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="67.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="86.000000" y="0.000000" />
-                                                    <vertice x="86.000000" y="133.000000" />
-                                                    <vertice x="148.000000" y="134.000000" />
-                                                    <vertice x="147.000000" y="1.000000" />
+                                                    <vertice x="250.000000" y="120.000000" />
+                                                    <vertice x="249.000000" y="182.000000" />
+                                                    <vertice x="303.000000" y="185.000000" />
+                                                    <vertice x="301.000000" y="118.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2965,10 +2965,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="67.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="86.000000" y="0.000000" />
-                                                    <vertice x="86.000000" y="133.000000" />
-                                                    <vertice x="148.000000" y="134.000000" />
-                                                    <vertice x="147.000000" y="1.000000" />
+                                                    <vertice x="250.000000" y="120.000000" />
+                                                    <vertice x="249.000000" y="182.000000" />
+                                                    <vertice x="303.000000" y="185.000000" />
+                                                    <vertice x="301.000000" y="118.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2978,10 +2978,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="67.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="86.000000" y="0.000000" />
-                                                    <vertice x="86.000000" y="133.000000" />
-                                                    <vertice x="148.000000" y="134.000000" />
-                                                    <vertice x="147.000000" y="1.000000" />
+                                                    <vertice x="250.000000" y="120.000000" />
+                                                    <vertice x="249.000000" y="182.000000" />
+                                                    <vertice x="303.000000" y="185.000000" />
+                                                    <vertice x="301.000000" y="118.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -2995,10 +2995,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="61.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="87.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="144.000000" />
-                                                    <vertice x="87.000000" y="144.000000" />
+                                                    <vertice x="220.000000" y="115.000000" />
+                                                    <vertice x="267.000000" y="118.000000" />
+                                                    <vertice x="267.000000" y="175.000000" />
+                                                    <vertice x="220.000000" y="177.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3008,10 +3008,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="61.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="87.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="144.000000" />
-                                                    <vertice x="87.000000" y="144.000000" />
+                                                    <vertice x="220.000000" y="115.000000" />
+                                                    <vertice x="267.000000" y="118.000000" />
+                                                    <vertice x="267.000000" y="175.000000" />
+                                                    <vertice x="220.000000" y="177.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3021,10 +3021,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="61.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="87.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="144.000000" />
-                                                    <vertice x="87.000000" y="144.000000" />
+                                                    <vertice x="220.000000" y="115.000000" />
+                                                    <vertice x="267.000000" y="118.000000" />
+                                                    <vertice x="267.000000" y="175.000000" />
+                                                    <vertice x="220.000000" y="177.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3034,10 +3034,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="61.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="87.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="144.000000" />
-                                                    <vertice x="87.000000" y="144.000000" />
+                                                    <vertice x="220.000000" y="115.000000" />
+                                                    <vertice x="267.000000" y="118.000000" />
+                                                    <vertice x="267.000000" y="175.000000" />
+                                                    <vertice x="220.000000" y="177.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3047,10 +3047,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="61.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="87.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="144.000000" />
-                                                    <vertice x="87.000000" y="144.000000" />
+                                                    <vertice x="220.000000" y="115.000000" />
+                                                    <vertice x="267.000000" y="118.000000" />
+                                                    <vertice x="267.000000" y="175.000000" />
+                                                    <vertice x="220.000000" y="177.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3060,10 +3060,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="61.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="87.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="144.000000" />
-                                                    <vertice x="87.000000" y="144.000000" />
+                                                    <vertice x="220.000000" y="115.000000" />
+                                                    <vertice x="267.000000" y="118.000000" />
+                                                    <vertice x="267.000000" y="175.000000" />
+                                                    <vertice x="220.000000" y="177.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3073,10 +3073,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="61.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="87.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="144.000000" />
-                                                    <vertice x="87.000000" y="144.000000" />
+                                                    <vertice x="220.000000" y="115.000000" />
+                                                    <vertice x="267.000000" y="118.000000" />
+                                                    <vertice x="267.000000" y="175.000000" />
+                                                    <vertice x="220.000000" y="177.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3086,10 +3086,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="61.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="87.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="144.000000" />
-                                                    <vertice x="87.000000" y="144.000000" />
+                                                    <vertice x="220.000000" y="115.000000" />
+                                                    <vertice x="267.000000" y="118.000000" />
+                                                    <vertice x="267.000000" y="175.000000" />
+                                                    <vertice x="220.000000" y="177.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3099,10 +3099,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="61.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="87.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="144.000000" />
-                                                    <vertice x="87.000000" y="144.000000" />
+                                                    <vertice x="220.000000" y="115.000000" />
+                                                    <vertice x="267.000000" y="118.000000" />
+                                                    <vertice x="267.000000" y="175.000000" />
+                                                    <vertice x="220.000000" y="177.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3112,10 +3112,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="61.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="87.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="144.000000" />
-                                                    <vertice x="87.000000" y="144.000000" />
+                                                    <vertice x="220.000000" y="115.000000" />
+                                                    <vertice x="267.000000" y="118.000000" />
+                                                    <vertice x="267.000000" y="175.000000" />
+                                                    <vertice x="220.000000" y="177.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3129,10 +3129,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="65.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="80.000000" y="0.000000" />
-                                                    <vertice x="80.000000" y="142.000000" />
-                                                    <vertice x="136.000000" y="144.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
+                                                    <vertice x="219.000000" y="113.000000" />
+                                                    <vertice x="218.000000" y="178.000000" />
+                                                    <vertice x="269.000000" y="178.000000" />
+                                                    <vertice x="266.000000" y="120.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3142,10 +3142,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="65.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="80.000000" y="0.000000" />
-                                                    <vertice x="80.000000" y="142.000000" />
-                                                    <vertice x="136.000000" y="144.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
+                                                    <vertice x="219.000000" y="113.000000" />
+                                                    <vertice x="218.000000" y="178.000000" />
+                                                    <vertice x="269.000000" y="178.000000" />
+                                                    <vertice x="266.000000" y="120.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3155,10 +3155,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="65.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="80.000000" y="0.000000" />
-                                                    <vertice x="80.000000" y="142.000000" />
-                                                    <vertice x="136.000000" y="144.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
+                                                    <vertice x="219.000000" y="113.000000" />
+                                                    <vertice x="218.000000" y="178.000000" />
+                                                    <vertice x="269.000000" y="178.000000" />
+                                                    <vertice x="266.000000" y="120.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3168,10 +3168,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="65.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="80.000000" y="0.000000" />
-                                                    <vertice x="80.000000" y="142.000000" />
-                                                    <vertice x="136.000000" y="144.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
+                                                    <vertice x="219.000000" y="113.000000" />
+                                                    <vertice x="218.000000" y="178.000000" />
+                                                    <vertice x="269.000000" y="178.000000" />
+                                                    <vertice x="266.000000" y="120.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3181,10 +3181,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="65.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="80.000000" y="0.000000" />
-                                                    <vertice x="80.000000" y="142.000000" />
-                                                    <vertice x="136.000000" y="144.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
+                                                    <vertice x="219.000000" y="113.000000" />
+                                                    <vertice x="218.000000" y="178.000000" />
+                                                    <vertice x="269.000000" y="178.000000" />
+                                                    <vertice x="266.000000" y="120.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3194,10 +3194,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="65.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="80.000000" y="0.000000" />
-                                                    <vertice x="80.000000" y="142.000000" />
-                                                    <vertice x="136.000000" y="144.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
+                                                    <vertice x="219.000000" y="113.000000" />
+                                                    <vertice x="218.000000" y="178.000000" />
+                                                    <vertice x="269.000000" y="178.000000" />
+                                                    <vertice x="266.000000" y="120.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3207,10 +3207,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="65.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="80.000000" y="0.000000" />
-                                                    <vertice x="80.000000" y="142.000000" />
-                                                    <vertice x="136.000000" y="144.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
+                                                    <vertice x="219.000000" y="113.000000" />
+                                                    <vertice x="218.000000" y="178.000000" />
+                                                    <vertice x="269.000000" y="178.000000" />
+                                                    <vertice x="266.000000" y="120.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3220,10 +3220,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="65.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="80.000000" y="0.000000" />
-                                                    <vertice x="80.000000" y="142.000000" />
-                                                    <vertice x="136.000000" y="144.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
+                                                    <vertice x="219.000000" y="113.000000" />
+                                                    <vertice x="218.000000" y="178.000000" />
+                                                    <vertice x="269.000000" y="178.000000" />
+                                                    <vertice x="266.000000" y="120.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3233,10 +3233,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="65.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="80.000000" y="0.000000" />
-                                                    <vertice x="80.000000" y="142.000000" />
-                                                    <vertice x="136.000000" y="144.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
+                                                    <vertice x="219.000000" y="113.000000" />
+                                                    <vertice x="218.000000" y="178.000000" />
+                                                    <vertice x="269.000000" y="178.000000" />
+                                                    <vertice x="266.000000" y="120.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3246,10 +3246,10 @@
                                             <centerPoint automatic="false" name="centre" x="109.000000" y="65.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="80.000000" y="0.000000" />
-                                                    <vertice x="80.000000" y="142.000000" />
-                                                    <vertice x="136.000000" y="144.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
+                                                    <vertice x="219.000000" y="113.000000" />
+                                                    <vertice x="218.000000" y="178.000000" />
+                                                    <vertice x="269.000000" y="178.000000" />
+                                                    <vertice x="266.000000" y="120.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3263,10 +3263,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="69.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="83.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="144.000000" />
-                                                    <vertice x="81.000000" y="144.000000" />
+                                                    <vertice x="213.000000" y="113.000000" />
+                                                    <vertice x="257.000000" y="115.000000" />
+                                                    <vertice x="259.000000" y="179.000000" />
+                                                    <vertice x="211.000000" y="178.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3276,10 +3276,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="69.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="83.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="144.000000" />
-                                                    <vertice x="81.000000" y="144.000000" />
+                                                    <vertice x="213.000000" y="113.000000" />
+                                                    <vertice x="257.000000" y="115.000000" />
+                                                    <vertice x="259.000000" y="179.000000" />
+                                                    <vertice x="211.000000" y="178.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3289,10 +3289,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="69.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="83.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="144.000000" />
-                                                    <vertice x="81.000000" y="144.000000" />
+                                                    <vertice x="213.000000" y="113.000000" />
+                                                    <vertice x="257.000000" y="115.000000" />
+                                                    <vertice x="259.000000" y="179.000000" />
+                                                    <vertice x="211.000000" y="178.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3302,10 +3302,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="69.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="83.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="144.000000" />
-                                                    <vertice x="81.000000" y="144.000000" />
+                                                    <vertice x="213.000000" y="113.000000" />
+                                                    <vertice x="257.000000" y="115.000000" />
+                                                    <vertice x="259.000000" y="179.000000" />
+                                                    <vertice x="211.000000" y="178.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3315,10 +3315,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="69.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="83.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="144.000000" />
-                                                    <vertice x="81.000000" y="144.000000" />
+                                                    <vertice x="213.000000" y="113.000000" />
+                                                    <vertice x="257.000000" y="115.000000" />
+                                                    <vertice x="259.000000" y="179.000000" />
+                                                    <vertice x="211.000000" y="178.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3328,10 +3328,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="69.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="83.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="144.000000" />
-                                                    <vertice x="81.000000" y="144.000000" />
+                                                    <vertice x="213.000000" y="113.000000" />
+                                                    <vertice x="257.000000" y="115.000000" />
+                                                    <vertice x="259.000000" y="179.000000" />
+                                                    <vertice x="211.000000" y="178.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3341,10 +3341,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="69.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="83.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="144.000000" />
-                                                    <vertice x="81.000000" y="144.000000" />
+                                                    <vertice x="213.000000" y="113.000000" />
+                                                    <vertice x="257.000000" y="115.000000" />
+                                                    <vertice x="259.000000" y="179.000000" />
+                                                    <vertice x="211.000000" y="178.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3354,10 +3354,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="69.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="83.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="144.000000" />
-                                                    <vertice x="81.000000" y="144.000000" />
+                                                    <vertice x="213.000000" y="113.000000" />
+                                                    <vertice x="257.000000" y="115.000000" />
+                                                    <vertice x="259.000000" y="179.000000" />
+                                                    <vertice x="211.000000" y="178.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3367,10 +3367,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="69.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="83.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="144.000000" />
-                                                    <vertice x="81.000000" y="144.000000" />
+                                                    <vertice x="213.000000" y="113.000000" />
+                                                    <vertice x="257.000000" y="115.000000" />
+                                                    <vertice x="259.000000" y="179.000000" />
+                                                    <vertice x="211.000000" y="178.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3380,10 +3380,10 @@
                                             <centerPoint automatic="false" name="centre" x="108.000000" y="69.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="83.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="0.000000" />
-                                                    <vertice x="148.000000" y="144.000000" />
-                                                    <vertice x="81.000000" y="144.000000" />
+                                                    <vertice x="213.000000" y="113.000000" />
+                                                    <vertice x="257.000000" y="115.000000" />
+                                                    <vertice x="259.000000" y="179.000000" />
+                                                    <vertice x="211.000000" y="178.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3397,10 +3397,10 @@
                                             <centerPoint automatic="false" name="centre" x="107.000000" y="66.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="67.000000" y="0.000000" />
-                                                    <vertice x="78.000000" y="144.000000" />
-                                                    <vertice x="143.000000" y="144.000000" />
-                                                    <vertice x="136.000000" y="0.000000" />
+                                                    <vertice x="210.000000" y="94.000000" />
+                                                    <vertice x="211.000000" y="166.000000" />
+                                                    <vertice x="251.000000" y="179.000000" />
+                                                    <vertice x="260.000000" y="114.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3410,10 +3410,10 @@
                                             <centerPoint automatic="false" name="centre" x="107.000000" y="66.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="67.000000" y="0.000000" />
-                                                    <vertice x="78.000000" y="144.000000" />
-                                                    <vertice x="143.000000" y="144.000000" />
-                                                    <vertice x="136.000000" y="0.000000" />
+                                                    <vertice x="210.000000" y="94.000000" />
+                                                    <vertice x="211.000000" y="166.000000" />
+                                                    <vertice x="251.000000" y="179.000000" />
+                                                    <vertice x="260.000000" y="114.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3423,10 +3423,10 @@
                                             <centerPoint automatic="false" name="centre" x="107.000000" y="66.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="67.000000" y="0.000000" />
-                                                    <vertice x="78.000000" y="144.000000" />
-                                                    <vertice x="143.000000" y="144.000000" />
-                                                    <vertice x="136.000000" y="0.000000" />
+                                                    <vertice x="210.000000" y="94.000000" />
+                                                    <vertice x="211.000000" y="166.000000" />
+                                                    <vertice x="251.000000" y="179.000000" />
+                                                    <vertice x="260.000000" y="114.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3436,10 +3436,10 @@
                                             <centerPoint automatic="false" name="centre" x="107.000000" y="66.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="67.000000" y="0.000000" />
-                                                    <vertice x="78.000000" y="144.000000" />
-                                                    <vertice x="143.000000" y="144.000000" />
-                                                    <vertice x="136.000000" y="0.000000" />
+                                                    <vertice x="210.000000" y="94.000000" />
+                                                    <vertice x="211.000000" y="166.000000" />
+                                                    <vertice x="251.000000" y="179.000000" />
+                                                    <vertice x="260.000000" y="114.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3449,10 +3449,10 @@
                                             <centerPoint automatic="false" name="centre" x="107.000000" y="66.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="67.000000" y="0.000000" />
-                                                    <vertice x="78.000000" y="144.000000" />
-                                                    <vertice x="143.000000" y="144.000000" />
-                                                    <vertice x="136.000000" y="0.000000" />
+                                                    <vertice x="210.000000" y="94.000000" />
+                                                    <vertice x="211.000000" y="166.000000" />
+                                                    <vertice x="251.000000" y="179.000000" />
+                                                    <vertice x="260.000000" y="114.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3462,10 +3462,10 @@
                                             <centerPoint automatic="false" name="centre" x="107.000000" y="66.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="67.000000" y="0.000000" />
-                                                    <vertice x="78.000000" y="144.000000" />
-                                                    <vertice x="143.000000" y="144.000000" />
-                                                    <vertice x="136.000000" y="0.000000" />
+                                                    <vertice x="210.000000" y="94.000000" />
+                                                    <vertice x="211.000000" y="166.000000" />
+                                                    <vertice x="251.000000" y="179.000000" />
+                                                    <vertice x="260.000000" y="114.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3475,10 +3475,10 @@
                                             <centerPoint automatic="false" name="centre" x="107.000000" y="66.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="67.000000" y="0.000000" />
-                                                    <vertice x="78.000000" y="144.000000" />
-                                                    <vertice x="143.000000" y="144.000000" />
-                                                    <vertice x="136.000000" y="0.000000" />
+                                                    <vertice x="210.000000" y="94.000000" />
+                                                    <vertice x="211.000000" y="166.000000" />
+                                                    <vertice x="251.000000" y="179.000000" />
+                                                    <vertice x="260.000000" y="114.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3488,10 +3488,10 @@
                                             <centerPoint automatic="false" name="centre" x="107.000000" y="66.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="67.000000" y="0.000000" />
-                                                    <vertice x="78.000000" y="144.000000" />
-                                                    <vertice x="143.000000" y="144.000000" />
-                                                    <vertice x="136.000000" y="0.000000" />
+                                                    <vertice x="210.000000" y="94.000000" />
+                                                    <vertice x="211.000000" y="166.000000" />
+                                                    <vertice x="251.000000" y="179.000000" />
+                                                    <vertice x="260.000000" y="114.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3501,10 +3501,10 @@
                                             <centerPoint automatic="false" name="centre" x="107.000000" y="66.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="67.000000" y="0.000000" />
-                                                    <vertice x="78.000000" y="144.000000" />
-                                                    <vertice x="143.000000" y="144.000000" />
-                                                    <vertice x="136.000000" y="0.000000" />
+                                                    <vertice x="210.000000" y="94.000000" />
+                                                    <vertice x="211.000000" y="166.000000" />
+                                                    <vertice x="251.000000" y="179.000000" />
+                                                    <vertice x="260.000000" y="114.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3514,10 +3514,10 @@
                                             <centerPoint automatic="false" name="centre" x="107.000000" y="66.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="67.000000" y="0.000000" />
-                                                    <vertice x="78.000000" y="144.000000" />
-                                                    <vertice x="143.000000" y="144.000000" />
-                                                    <vertice x="136.000000" y="0.000000" />
+                                                    <vertice x="210.000000" y="94.000000" />
+                                                    <vertice x="211.000000" y="166.000000" />
+                                                    <vertice x="251.000000" y="179.000000" />
+                                                    <vertice x="260.000000" y="114.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3531,10 +3531,10 @@
                                             <centerPoint automatic="false" name="centre" x="105.000000" y="62.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="78.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="144.000000" />
-                                                    <vertice x="77.000000" y="144.000000" />
+                                                    <vertice x="216.000000" y="119.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
+                                                    <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3544,10 +3544,10 @@
                                             <centerPoint automatic="false" name="centre" x="105.000000" y="62.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="78.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="144.000000" />
-                                                    <vertice x="77.000000" y="144.000000" />
+                                                    <vertice x="216.000000" y="119.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
+                                                    <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3557,10 +3557,10 @@
                                             <centerPoint automatic="false" name="centre" x="105.000000" y="62.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="78.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="144.000000" />
-                                                    <vertice x="77.000000" y="144.000000" />
+                                                    <vertice x="216.000000" y="119.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
+                                                    <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3570,10 +3570,10 @@
                                             <centerPoint automatic="false" name="centre" x="105.000000" y="62.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="78.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="144.000000" />
-                                                    <vertice x="77.000000" y="144.000000" />
+                                                    <vertice x="216.000000" y="119.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
+                                                    <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3583,10 +3583,10 @@
                                             <centerPoint automatic="false" name="centre" x="105.000000" y="62.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="78.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="144.000000" />
-                                                    <vertice x="77.000000" y="144.000000" />
+                                                    <vertice x="216.000000" y="119.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
+                                                    <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3596,10 +3596,10 @@
                                             <centerPoint automatic="false" name="centre" x="105.000000" y="62.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="78.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="144.000000" />
-                                                    <vertice x="77.000000" y="144.000000" />
+                                                    <vertice x="216.000000" y="119.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
+                                                    <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3609,10 +3609,10 @@
                                             <centerPoint automatic="false" name="centre" x="105.000000" y="62.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="78.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="144.000000" />
-                                                    <vertice x="77.000000" y="144.000000" />
+                                                    <vertice x="216.000000" y="119.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
+                                                    <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3622,10 +3622,10 @@
                                             <centerPoint automatic="false" name="centre" x="105.000000" y="62.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="78.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="144.000000" />
-                                                    <vertice x="77.000000" y="144.000000" />
+                                                    <vertice x="216.000000" y="119.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
+                                                    <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3635,10 +3635,10 @@
                                             <centerPoint automatic="false" name="centre" x="105.000000" y="62.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="78.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="144.000000" />
-                                                    <vertice x="77.000000" y="144.000000" />
+                                                    <vertice x="216.000000" y="119.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
+                                                    <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -3648,10 +3648,10 @@
                                             <centerPoint automatic="false" name="centre" x="105.000000" y="62.000000" />
                                             <customCollisionMask>
                                                 <polygon>
-                                                    <vertice x="78.000000" y="0.000000" />
-                                                    <vertice x="137.000000" y="0.000000" />
-                                                    <vertice x="138.000000" y="144.000000" />
-                                                    <vertice x="77.000000" y="144.000000" />
+                                                    <vertice x="216.000000" y="119.000000" />
+                                                    <vertice x="260.000000" y="122.000000" />
+                                                    <vertice x="259.000000" y="176.000000" />
+                                                    <vertice x="216.000000" y="174.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
