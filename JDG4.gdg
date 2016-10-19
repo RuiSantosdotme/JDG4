@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project firstLayout="">
-    <gdVersion build="92" major="4" minor="0" revision="0" />
+    <gdVersion build="92" major="4" minor="0" revision="1" />
     <properties folderProject="false" linuxExecutableFilename="" macExecutableFilename="" packageName="com.example.gamename" useExternalSourceFiles="false" winExecutableFilename="" winExecutableIconFile="">
         <name>Project</name>
         <author></author>
@@ -5197,6 +5197,20 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action>
+                            <type inverted="false" value="PauseAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
                         <action>
                             <type inverted="false" value="SetAnimationName" />
                             <parameters>
