@@ -279,7 +279,7 @@
             <objectsGroups />
             <variables />
             <instances>
-                <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Player" width="160.000000" x="64.000000" y="128.000000" zOrder="1">
+                <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Player" width="160.000000" x="51.000015" y="140.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -4747,6 +4747,14 @@
                             <subActions />
                         </action>
                         <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>&quot;Walk&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
                             <type inverted="false" value="PlayAnimation" />
                             <parameters>
                                 <parameter>Enemy</parameter>
@@ -4774,6 +4782,14 @@
                             <parameters>
                                 <parameter>Enemy</parameter>
                                 <parameter>TopDownMovement</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Walk&quot;</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -4809,6 +4825,14 @@
                             <subActions />
                         </action>
                         <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Walk&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
                             <type inverted="false" value="PlayAnimation" />
                             <parameters>
                                 <parameter>Enemy</parameter>
@@ -4839,6 +4863,36 @@
                             </parameters>
                             <subActions />
                         </action>
+                        <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Walk&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="Arret" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
                         <action>
                             <type inverted="false" value="PlayAnimation" />
                             <parameters>

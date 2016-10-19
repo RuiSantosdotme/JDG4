@@ -4747,6 +4747,14 @@
                             <subActions />
                         </action>
                         <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>&quot;Walk&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
                             <type inverted="false" value="PlayAnimation" />
                             <parameters>
                                 <parameter>Enemy</parameter>
@@ -4774,6 +4782,14 @@
                             <parameters>
                                 <parameter>Enemy</parameter>
                                 <parameter>TopDownMovement</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Walk&quot;</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -4809,6 +4825,14 @@
                             <subActions />
                         </action>
                         <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Walk&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
                             <type inverted="false" value="PlayAnimation" />
                             <parameters>
                                 <parameter>Enemy</parameter>
@@ -4836,6 +4860,67 @@
                             <parameters>
                                 <parameter>Enemy</parameter>
                                 <parameter>TopDownMovement</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Walk&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="Arret" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="PauseAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="TopDownMovementBehavior::IsMoving" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>TopDownMovement</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>&quot;Walk&quot;</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -5198,7 +5283,7 @@
                 <object bold="false" italic="false" name="GamePaused" smoothed="true" type="TextObject::Text" underlined="false">
                     <variables />
                     <behaviors />
-                    <string> GAME PAUSED&#x0A;&#x0A;Press &apos;b&apos; to resume</string>
+                    <string>GAME PAUSED&#x0A;&#x0A;Press &apos;b&apos; to resume</string>
                     <font></font>
                     <characterSize>28</characterSize>
                     <color b="0" g="0" r="0" />
