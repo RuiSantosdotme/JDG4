@@ -6123,15 +6123,6 @@
                             </parameters>
                             <subConditions />
                         </condition>
-                        <condition>
-                            <type inverted="false" value="VarGlobal" />
-                            <parameters>
-                                <parameter>PlayerLife</parameter>
-                                <parameter>&gt;=</parameter>
-                                <parameter>0</parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
                     </conditions>
                     <actions>
                         <action>
@@ -6201,9 +6192,104 @@
                     <type>BuiltinCommonInstructions::Standard</type>
                     <conditions>
                         <condition>
-                            <type inverted="false" value="VarGlobal" />
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>BotForEnemy</parameter>
+                                <parameter>Player</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="Timer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>0.5</parameter>
+                                <parameter>&quot;BotEnemyPlayerCollision&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="true" value="AnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Attack&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarGlobal" />
                             <parameters>
                                 <parameter>PlayerLife</parameter>
+                                <parameter>-</parameter>
+                                <parameter>5</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="TextObject::String" />
+                            <parameters>
+                                <parameter>PlayerLife</parameter>
+                                <parameter>=</parameter>
+                                <parameter>&quot;Player HP: &quot;+ToString(round(GlobalVariable(PlayerLife)))</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ResetTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;BotEnemyPlayerCollision&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="AnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Attack&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>BotForEnemy</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="Delete" />
+                            <parameters>
+                                <parameter>BotForEnemy</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="VarGlobal" />
+                            <parameters>
+                                <parameter>EnemyLife</parameter>
                                 <parameter>&gt;=</parameter>
                                 <parameter>100</parameter>
                             </parameters>
@@ -6225,7 +6311,7 @@
                             <parameters>
                                 <parameter>EnemyLife</parameter>
                                 <parameter>=</parameter>
-                                <parameter>&quot;Enemy HP: &quot;+ToString(round(GlobalVariable(PlayerLife)))</parameter>
+                                <parameter>&quot;Enemy HP: &quot;+ToString(round(GlobalVariable(EnemyLife)))</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -6259,15 +6345,6 @@
                             <parameters>
                                 <parameter>Enemy</parameter>
                                 <parameter>&quot;Attack&quot;</parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                        <condition>
-                            <type inverted="false" value="VarGlobal" />
-                            <parameters>
-                                <parameter>EnemyLife</parameter>
-                                <parameter>&gt;=</parameter>
-                                <parameter>0</parameter>
                             </parameters>
                             <subConditions />
                         </condition>
@@ -6329,6 +6406,101 @@
                             <type inverted="false" value="Delete" />
                             <parameters>
                                 <parameter>BotForEnemy</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Bot</parameter>
+                                <parameter>Enemy</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="Timer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>0.5</parameter>
+                                <parameter>&quot;BotPlayerEnemyCollision&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="true" value="AnimationName" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>&quot;Attack&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarGlobal" />
+                            <parameters>
+                                <parameter>EnemyLife</parameter>
+                                <parameter>-</parameter>
+                                <parameter>5</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="TextObject::String" />
+                            <parameters>
+                                <parameter>EnemyLife</parameter>
+                                <parameter>=</parameter>
+                                <parameter>&quot;Enemy HP: &quot;+ToString(round(GlobalVariable(EnemyLife)))</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ResetTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;BotPlayerEnemyCollision&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Bot</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="AnimationName" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>&quot;Attack&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="Delete" />
+                            <parameters>
+                                <parameter>Bot</parameter>
                                 <parameter></parameter>
                             </parameters>
                             <subActions />
