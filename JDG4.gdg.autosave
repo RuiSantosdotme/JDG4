@@ -267,6 +267,9 @@
             <resource alwaysLoaded="false" file="sprites/Hero/Attack_01/attack_30007.png" kind="image" name="attack_30007.png" smoothed="true" userAdded="true" />
             <resource alwaysLoaded="false" file="sprites/Hero/Attack_01/attack_30008.png" kind="image" name="attack_30008.png" smoothed="true" userAdded="true" />
             <resource alwaysLoaded="false" file="sprites/Hero/Attack_01/attack_30009.png" kind="image" name="attack_30009.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="Background/hq-horror-background_102047_12.jpg" kind="image" name="hq-horror-background_102047_12.jpg" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="Background/639d019612a7388d4b890cbb327d8017.jpg" kind="image" name="639d019612a7388d4b890cbb327d8017.jpg" smoothed="true" userAdded="false" />
+            <resource alwaysLoaded="false" file="Background/Blade_TrapLA.png" kind="image" name="Blade_TrapLA.png" smoothed="true" userAdded="false" />
         </resources>
         <resourceFolders />
     </resources>
@@ -274,17 +277,29 @@
     <objectsGroups />
     <variables>
         <variable name="PlayerLife" value="100" />
+        <variable name="EnemyLife" value="100" />
+        <variable name="PlayerScore" value="0" />
+        <variable name="EnemyScore" value="0" />
     </variables>
     <layouts>
         <layout b="209" disableInputWhenNotFocused="true" mangledName="Sala_32lvl1" name="Sala lvl1" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
             <uiSettings grid="true" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="1.000000" />
             <objectsGroups />
-            <variables />
+            <variables>
+                <variable name="nBot" value="10" />
+                <variable name="nBotEnemy" value="10" />
+                <variable name="nHitPlayer" value="0" />
+                <variable name="nHitEnemy" value="0" />
+                <variable name="Healthdrop" value="0" />
+                <variable name="Trap" value="0" />
+            </variables>
             <instances>
                 <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Player" width="160.000000" x="156.000000" y="160.000000" zOrder="3">
                     <numberProperties />
                     <stringProperties />
-                    <initialVariables />
+                    <initialVariables>
+                        <variable name="nHit" value="0" />
+                    </initialVariables>
                 </instance>
                 <instance angle="0.000000" customSize="true" height="448.000000" layer="" locked="true" name="Floor" width="736.000000" x="64.000015" y="128.000000" zOrder="-3">
                     <numberProperties />
@@ -421,12 +436,29 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Enemy" width="147.310349" x="160.000000" y="448.000000" zOrder="5">
+                <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Enemy" width="147.310349" x="160.000000" y="448.000000" zOrder="3">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables>
+                        <variable name="nHit" value="0" />
+                    </initialVariables>
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="EnemyLife" width="0.000000" x="64.000000" y="64.000000" zOrder="6">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="EnemyLife" width="0.000000" x="64.000000" y="64.000000" zOrder="6">
+                <instance angle="0.000000" customSize="true" height="128.000000" layer="" locked="true" name="Door" width="32.000000" x="768.000000" y="226.000000" zOrder="1">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="PlayerScore" width="0.000000" x="512.000000" y="32.000000" zOrder="7">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="EnemyScore" width="0.000000" x="512.000000" y="64.000000" zOrder="8">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -434,7 +466,9 @@
             </instances>
             <objects>
                 <object name="Player" type="Sprite">
-                    <variables />
+                    <variables>
+                        <variable name="nHit" value="0" />
+                    </variables>
                     <behaviors>
                         <behavior acceleration="400.000000" allowDiagonals="true" angleOffset="0.000000" angularMaxSpeed="180.000000" deceleration="800.000000" ignoreDefaultControls="false" maxSpeed="200.000000" name="TopDownMovement" rotateObject="true" type="TopDownMovementBehavior::TopDownMovementBehavior" />
                     </behaviors>
@@ -1517,7 +1551,7 @@
                         </animation>
                         <animation name="Attack" useMultipleDirections="true">
                             <directions>
-                                <direction looping="true" timeBetweenFrames="0.050000">
+                                <direction looping="true" timeBetweenFrames="0.035000">
                                     <sprites>
                                         <sprite hasCustomCollisionMask="true" image="attack_10000.png">
                                             <points />
@@ -3292,7 +3326,9 @@
                     </animations>
                 </object>
                 <object name="Enemy" type="Sprite">
-                    <variables />
+                    <variables>
+                        <variable name="nHit" value="0" />
+                    </variables>
                     <behaviors>
                         <behavior acceleration="400.000000" allowDiagonals="true" angleOffset="0.000000" angularMaxSpeed="180.000000" deceleration="800.000000" ignoreDefaultControls="true" maxSpeed="200.000000" name="TopDownMovement" rotateObject="true" type="TopDownMovementBehavior::TopDownMovementBehavior" />
                     </behaviors>
@@ -4375,7 +4411,7 @@
                         </animation>
                         <animation name="Attack" useMultipleDirections="true">
                             <directions>
-                                <direction looping="true" timeBetweenFrames="0.050000">
+                                <direction looping="true" timeBetweenFrames="0.035000">
                                     <sprites>
                                         <sprite hasCustomCollisionMask="true" image="attack_10000.png">
                                             <points />
@@ -4975,6 +5011,103 @@
                     <characterSize>20</characterSize>
                     <color b="255" g="255" r="255" />
                 </object>
+                <object name="Door" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Background.jpg">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="400.000000" y="300.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="800.000000" y="0.000000" />
+                                                    <vertice x="800.000000" y="600.000000" />
+                                                    <vertice x="0.000000" y="600.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object bold="false" italic="false" name="PlayerScore" smoothed="true" type="TextObject::Text" underlined="false">
+                    <variables />
+                    <behaviors />
+                    <string>Player Score:</string>
+                    <font></font>
+                    <characterSize>20</characterSize>
+                    <color b="255" g="255" r="255" />
+                </object>
+                <object bold="false" italic="false" name="EnemyScore" smoothed="true" type="TextObject::Text" underlined="false">
+                    <variables />
+                    <behaviors />
+                    <string>Enemy Score:</string>
+                    <font></font>
+                    <characterSize>20</characterSize>
+                    <color b="255" g="255" r="255" />
+                </object>
+                <object name="Healthdrop" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="0_down.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="16.000000" y="32.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="32.000000" y="0.000000" />
+                                                    <vertice x="32.000000" y="64.000000" />
+                                                    <vertice x="0.000000" y="64.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="Trap" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="Blade_TrapLA.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="24.000000" y="24.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="48.000000" y="0.000000" />
+                                                    <vertice x="48.000000" y="48.000000" />
+                                                    <vertice x="0.000000" y="48.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
             </objects>
             <events>
                 <event disabled="false" folded="false">
@@ -5089,17 +5222,17 @@
                             <type inverted="false" value="Timer" />
                             <parameters>
                                 <parameter></parameter>
-                                <parameter>5</parameter>
+                                <parameter>3</parameter>
                                 <parameter>&quot;EnemyCreation&quot;</parameter>
                             </parameters>
                             <subConditions />
                         </condition>
                         <condition>
-                            <type inverted="false" value="NbObjet" />
+                            <type inverted="false" value="VarScene" />
                             <parameters>
-                                <parameter>Bot</parameter>
-                                <parameter>&lt;=</parameter>
-                                <parameter>5</parameter>
+                                <parameter>nBot</parameter>
+                                <parameter>&gt;</parameter>
+                                <parameter>0</parameter>
                             </parameters>
                             <subConditions />
                         </condition>
@@ -5124,6 +5257,15 @@
                             </parameters>
                             <subActions />
                         </action>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>nBot</parameter>
+                                <parameter>-</parameter>
+                                <parameter>1</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
                     </actions>
                     <events />
                 </event>
@@ -5135,7 +5277,7 @@
                             <parameters>
                                 <parameter>Bot</parameter>
                                 <parameter>&lt;=</parameter>
-                                <parameter>5</parameter>
+                                <parameter>10</parameter>
                             </parameters>
                             <subConditions />
                         </condition>
@@ -5281,7 +5423,7 @@
                             <parameters>
                                 <parameter>BotForEnemy</parameter>
                                 <parameter>&lt;=</parameter>
-                                <parameter>5</parameter>
+                                <parameter>10</parameter>
                             </parameters>
                             <subConditions />
                         </condition>
@@ -5308,17 +5450,17 @@
                             <type inverted="false" value="Timer" />
                             <parameters>
                                 <parameter></parameter>
-                                <parameter>5</parameter>
+                                <parameter>3</parameter>
                                 <parameter>&quot;EnemyCreationBot&quot;</parameter>
                             </parameters>
                             <subConditions />
                         </condition>
                         <condition>
-                            <type inverted="false" value="NbObjet" />
+                            <type inverted="false" value="VarScene" />
                             <parameters>
-                                <parameter>BotForEnemy</parameter>
-                                <parameter>&lt;=</parameter>
-                                <parameter>5</parameter>
+                                <parameter>nBotEnemy</parameter>
+                                <parameter>&gt;</parameter>
+                                <parameter>0</parameter>
                             </parameters>
                             <subConditions />
                         </condition>
@@ -5340,6 +5482,15 @@
                                 <parameter>920</parameter>
                                 <parameter>290</parameter>
                                 <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>nBotEnemy</parameter>
+                                <parameter>-</parameter>
+                                <parameter>1</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -6081,15 +6232,6 @@
                             </parameters>
                             <subActions />
                         </action>
-                        <action>
-                            <type inverted="false" value="TextObject::String" />
-                            <parameters>
-                                <parameter>PlayerLife</parameter>
-                                <parameter>=</parameter>
-                                <parameter>&quot;Player HP: &quot;+ToString(round(GlobalVariable(PlayerLife)))</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
                     </actions>
                     <events />
                 </event>
@@ -6097,29 +6239,11 @@
                     <type>BuiltinCommonInstructions::Standard</type>
                     <conditions>
                         <condition>
-                            <type inverted="false" value="CollisionNP" />
+                            <type inverted="false" value="VarGlobal" />
                             <parameters>
-                                <parameter>Bot</parameter>
-                                <parameter>Player</parameter>
-                                <parameter></parameter>
-                                <parameter></parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                        <condition>
-                            <type inverted="false" value="Timer" />
-                            <parameters>
-                                <parameter></parameter>
-                                <parameter>0.5</parameter>
-                                <parameter>&quot;BotPlayerCollision&quot;</parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                        <condition>
-                            <type inverted="true" value="AnimationName" />
-                            <parameters>
-                                <parameter>Player</parameter>
-                                <parameter>&quot;Attack&quot;</parameter>
+                                <parameter>PlayerLife</parameter>
+                                <parameter>&lt;=</parameter>
+                                <parameter>0</parameter>
                             </parameters>
                             <subConditions />
                         </condition>
@@ -6129,154 +6253,8 @@
                             <type inverted="false" value="ModVarGlobal" />
                             <parameters>
                                 <parameter>PlayerLife</parameter>
-                                <parameter>-</parameter>
-                                <parameter>5</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                        <action>
-                            <type inverted="false" value="TextObject::String" />
-                            <parameters>
-                                <parameter>PlayerLife</parameter>
                                 <parameter>=</parameter>
-                                <parameter>&quot;Player HP: &quot;+ToString(round(GlobalVariable(PlayerLife)))</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                        <action>
-                            <type inverted="false" value="ResetTimer" />
-                            <parameters>
-                                <parameter></parameter>
-                                <parameter>&quot;BotPlayerCollision&quot;</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                    </actions>
-                    <events />
-                </event>
-                <event disabled="false" folded="false">
-                    <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions>
-                        <condition>
-                            <type inverted="false" value="AnimationName" />
-                            <parameters>
-                                <parameter>Player</parameter>
-                                <parameter>&quot;Attack&quot;</parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                        <condition>
-                            <type inverted="false" value="CollisionNP" />
-                            <parameters>
-                                <parameter>Player</parameter>
-                                <parameter>Bot</parameter>
-                                <parameter></parameter>
-                                <parameter></parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action>
-                            <type inverted="false" value="Delete" />
-                            <parameters>
-                                <parameter>Bot</parameter>
-                                <parameter></parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                    </actions>
-                    <events />
-                </event>
-                <event disabled="false" folded="false">
-                    <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions>
-                        <condition>
-                            <type inverted="false" value="CollisionNP" />
-                            <parameters>
-                                <parameter>BotForEnemy</parameter>
-                                <parameter>Player</parameter>
-                                <parameter></parameter>
-                                <parameter></parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                        <condition>
-                            <type inverted="false" value="Timer" />
-                            <parameters>
-                                <parameter></parameter>
-                                <parameter>0.5</parameter>
-                                <parameter>&quot;BotEnemyPlayerCollision&quot;</parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                        <condition>
-                            <type inverted="true" value="AnimationName" />
-                            <parameters>
-                                <parameter>Player</parameter>
-                                <parameter>&quot;Attack&quot;</parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action>
-                            <type inverted="false" value="ModVarGlobal" />
-                            <parameters>
-                                <parameter>PlayerLife</parameter>
-                                <parameter>-</parameter>
-                                <parameter>5</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                        <action>
-                            <type inverted="false" value="TextObject::String" />
-                            <parameters>
-                                <parameter>PlayerLife</parameter>
-                                <parameter>=</parameter>
-                                <parameter>&quot;Player HP: &quot;+ToString(round(GlobalVariable(PlayerLife)))</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                        <action>
-                            <type inverted="false" value="ResetTimer" />
-                            <parameters>
-                                <parameter></parameter>
-                                <parameter>&quot;BotEnemyPlayerCollision&quot;</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                    </actions>
-                    <events />
-                </event>
-                <event disabled="false" folded="false">
-                    <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions>
-                        <condition>
-                            <type inverted="false" value="AnimationName" />
-                            <parameters>
-                                <parameter>Player</parameter>
-                                <parameter>&quot;Attack&quot;</parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                        <condition>
-                            <type inverted="false" value="CollisionNP" />
-                            <parameters>
-                                <parameter>Player</parameter>
-                                <parameter>BotForEnemy</parameter>
-                                <parameter></parameter>
-                                <parameter></parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action>
-                            <type inverted="false" value="Delete" />
-                            <parameters>
-                                <parameter>BotForEnemy</parameter>
-                                <parameter></parameter>
+                                <parameter>0</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -6306,12 +6284,219 @@
                             </parameters>
                             <subActions />
                         </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="VarGlobal" />
+                            <parameters>
+                                <parameter>EnemyLife</parameter>
+                                <parameter>&lt;=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
                         <action>
-                            <type inverted="false" value="TextObject::String" />
+                            <type inverted="false" value="ModVarGlobal" />
                             <parameters>
                                 <parameter>EnemyLife</parameter>
                                 <parameter>=</parameter>
-                                <parameter>&quot;Enemy HP: &quot;+ToString(round(GlobalVariable(EnemyLife)))</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Bot</parameter>
+                                <parameter>Player</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="Timer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>0.5</parameter>
+                                <parameter>&quot;BotPlayerCollision&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="true" value="AnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Attack&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarGlobal" />
+                            <parameters>
+                                <parameter>PlayerLife</parameter>
+                                <parameter>-</parameter>
+                                <parameter>5</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ResetTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;BotPlayerCollision&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="AnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Attack&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>Bot</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="Delete" />
+                            <parameters>
+                                <parameter>Bot</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarGlobal" />
+                            <parameters>
+                                <parameter>PlayerScore</parameter>
+                                <parameter>+</parameter>
+                                <parameter>100</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>BotForEnemy</parameter>
+                                <parameter>Player</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="Timer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>0.5</parameter>
+                                <parameter>&quot;BotEnemyPlayerCollision&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="true" value="AnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Attack&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarGlobal" />
+                            <parameters>
+                                <parameter>PlayerLife</parameter>
+                                <parameter>-</parameter>
+                                <parameter>5</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ResetTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;BotEnemyPlayerCollision&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="AnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Attack&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>BotForEnemy</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="Delete" />
+                            <parameters>
+                                <parameter>BotForEnemy</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarGlobal" />
+                            <parameters>
+                                <parameter>PlayerScore</parameter>
+                                <parameter>+</parameter>
+                                <parameter>100</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -6360,15 +6545,6 @@
                             <subActions />
                         </action>
                         <action>
-                            <type inverted="false" value="TextObject::String" />
-                            <parameters>
-                                <parameter>EnemyLife</parameter>
-                                <parameter>=</parameter>
-                                <parameter>&quot;Enemy HP: &quot;+ToString(round(GlobalVariable(EnemyLife)))</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                        <action>
                             <type inverted="false" value="ResetTimer" />
                             <parameters>
                                 <parameter></parameter>
@@ -6407,6 +6583,15 @@
                             <parameters>
                                 <parameter>BotForEnemy</parameter>
                                 <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarGlobal" />
+                            <parameters>
+                                <parameter>EnemyScore</parameter>
+                                <parameter>+</parameter>
+                                <parameter>100</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -6455,15 +6640,6 @@
                             <subActions />
                         </action>
                         <action>
-                            <type inverted="false" value="TextObject::String" />
-                            <parameters>
-                                <parameter>EnemyLife</parameter>
-                                <parameter>=</parameter>
-                                <parameter>&quot;Enemy HP: &quot;+ToString(round(GlobalVariable(EnemyLife)))</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                        <action>
                             <type inverted="false" value="ResetTimer" />
                             <parameters>
                                 <parameter></parameter>
@@ -6502,6 +6678,15 @@
                             <parameters>
                                 <parameter>Bot</parameter>
                                 <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarGlobal" />
+                            <parameters>
+                                <parameter>EnemyScore</parameter>
+                                <parameter>+</parameter>
+                                <parameter>100</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -6572,6 +6757,714 @@
                             <subActions />
                         </action>
                     </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>Door</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SeparateFromObjects" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>Door</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Door</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SeparateFromObjects" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Door</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="VarScene" />
+                            <parameters>
+                                <parameter>nBot</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="VarScene" />
+                            <parameters>
+                                <parameter>nBotEnemy</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="NbObjet" />
+                            <parameters>
+                                <parameter>Bot</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="NbObjet" />
+                            <parameters>
+                                <parameter>BotForEnemy</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="Delete" />
+                            <parameters>
+                                <parameter>Door</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="AnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Attack&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>Enemy</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>nHitEnemy</parameter>
+                                <parameter>+</parameter>
+                                <parameter>1</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="AnimationName" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>&quot;Attack&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Player</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>nHitPlayer</parameter>
+                                <parameter>+</parameter>
+                                <parameter>1</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="VarScene" />
+                            <parameters>
+                                <parameter>nHitPlayer</parameter>
+                                <parameter>&gt;=</parameter>
+                                <parameter>300</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>TopDownMovement</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="UnPauseTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;Stun&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="Timer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>3</parameter>
+                                        <parameter>&quot;Stun&quot;</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
+                                    <parameters>
+                                        <parameter>Player</parameter>
+                                        <parameter>TopDownMovement</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>400</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ModVarScene" />
+                                    <parameters>
+                                        <parameter>nHitPlayer</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>0</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ResetTimer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;Stun&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PauseTimer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;Stun&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ModVarGlobal" />
+                                    <parameters>
+                                        <parameter>EnemyScore</parameter>
+                                        <parameter>+</parameter>
+                                        <parameter>350</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                    </events>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="VarScene" />
+                            <parameters>
+                                <parameter>nHitEnemy</parameter>
+                                <parameter>&gt;=</parameter>
+                                <parameter>300</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>TopDownMovement</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="UnPauseTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;StunEnemy&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="Timer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>3</parameter>
+                                        <parameter>&quot;StunEnemy&quot;</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
+                                    <parameters>
+                                        <parameter>Enemy</parameter>
+                                        <parameter>TopDownMovement</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>400</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ModVarScene" />
+                                    <parameters>
+                                        <parameter>nHitEnemy</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>0</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ResetTimer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;StunEnemy&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PauseTimer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;StunEnemy&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ModVarGlobal" />
+                                    <parameters>
+                                        <parameter>PlayerScore</parameter>
+                                        <parameter>+</parameter>
+                                        <parameter>350</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                    </events>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions />
+                    <actions>
+                        <action>
+                            <type inverted="false" value="TextObject::String" />
+                            <parameters>
+                                <parameter>PlayerLife</parameter>
+                                <parameter>=</parameter>
+                                <parameter>&quot;Player HP: &quot;+ToString(round(GlobalVariable(PlayerLife)))</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="TextObject::String" />
+                            <parameters>
+                                <parameter>PlayerScore</parameter>
+                                <parameter>=</parameter>
+                                <parameter>&quot;PlayerScore: &quot;+ToString(round(GlobalVariable(PlayerScore)))</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions />
+                    <actions>
+                        <action>
+                            <type inverted="false" value="TextObject::String" />
+                            <parameters>
+                                <parameter>EnemyLife</parameter>
+                                <parameter>=</parameter>
+                                <parameter>&quot;Enemy HP: &quot;+ToString(round(GlobalVariable(EnemyLife)))</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="TextObject::String" />
+                            <parameters>
+                                <parameter>EnemyScore</parameter>
+                                <parameter>=</parameter>
+                                <parameter>&quot;EnemyScore: &quot;+ToString(round(GlobalVariable(EnemyScore)))</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="Timer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>10</parameter>
+                                <parameter>&quot;HealthCreation&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="VarScene" />
+                            <parameters>
+                                <parameter>Healthdrop</parameter>
+                                <parameter>&lt;</parameter>
+                                <parameter>2</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ResetTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;HealthCreation&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="Create" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>Healthdrop</parameter>
+                                <parameter>Random(750)</parameter>
+                                <parameter>Random(600)</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>Healthdrop</parameter>
+                                <parameter>+</parameter>
+                                <parameter>1</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>Healthdrop</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>Healthdrop</parameter>
+                                <parameter>-</parameter>
+                                <parameter>1</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarGlobal" />
+                            <parameters>
+                                <parameter>PlayerLife</parameter>
+                                <parameter>+</parameter>
+                                <parameter>25</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="Delete" />
+                            <parameters>
+                                <parameter>Healthdrop</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Healthdrop</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>Healthdrop</parameter>
+                                <parameter>-</parameter>
+                                <parameter>1</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarGlobal" />
+                            <parameters>
+                                <parameter>EnemyLife</parameter>
+                                <parameter>+</parameter>
+                                <parameter>25</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="Delete" />
+                            <parameters>
+                                <parameter>Healthdrop</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="Timer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>10</parameter>
+                                <parameter>&quot;TrapCreation&quot;</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="VarScene" />
+                            <parameters>
+                                <parameter>Healthdrop</parameter>
+                                <parameter>&lt;</parameter>
+                                <parameter>2</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ResetTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;HealthCreation&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="Create" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>Healthdrop</parameter>
+                                <parameter>Random(750)</parameter>
+                                <parameter>Random(600)</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>Healthdrop</parameter>
+                                <parameter>+</parameter>
+                                <parameter>1</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>Healthdrop</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>Healthdrop</parameter>
+                                <parameter>-</parameter>
+                                <parameter>1</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarGlobal" />
+                            <parameters>
+                                <parameter>PlayerLife</parameter>
+                                <parameter>+</parameter>
+                                <parameter>25</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="Delete" />
+                            <parameters>
+                                <parameter>Healthdrop</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Healthdrop</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="ModVarScene" />
+                            <parameters>
+                                <parameter>Healthdrop</parameter>
+                                <parameter>-</parameter>
+                                <parameter>1</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarGlobal" />
+                            <parameters>
+                                <parameter>EnemyLife</parameter>
+                                <parameter>+</parameter>
+                                <parameter>25</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="Delete" />
+                            <parameters>
+                                <parameter>Healthdrop</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions />
+                    <actions />
                     <events />
                 </event>
             </events>
@@ -6646,6 +7539,144 @@
                     <events />
                 </event>
             </events>
+            <layers>
+                <layer name="" visibility="true">
+                    <cameras>
+                        <camera defaultSize="true" defaultViewport="true" height="0.000000" viewportBottom="1.000000" viewportLeft="0.000000" viewportRight="1.000000" viewportTop="0.000000" width="0.000000" />
+                    </cameras>
+                    <effects />
+                </layer>
+            </layers>
+            <behaviorsSharedData />
+        </layout>
+        <layout b="209" disableInputWhenNotFocused="true" mangledName="StarScreen" name="StarScreen" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
+            <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="1.000000" />
+            <objectsGroups />
+            <variables />
+            <instances>
+                <instance angle="0.000000" customSize="true" height="82.999992" layer="" locked="false" name="NewObject" width="315.000000" x="249.000000" y="61.499992" zOrder="1">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="true" height="160.000000" layer="" locked="false" name="Story" width="793.000000" x="3.999985" y="181.500000" zOrder="2">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Start" width="0.000000" x="298.000000" y="441.500000" zOrder="3">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="true" height="600.000000" layer="" locked="true" name="Background" width="800.000000" x="0.000000" y="0.000000" zOrder="-3">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+            </instances>
+            <objects>
+                <object bold="false" italic="false" name="NewObject" smoothed="true" type="TextObject::Text" underlined="false">
+                    <variables />
+                    <behaviors />
+                    <string>THE LAST SEAT&#x0A;&#x0A;&#x0A;&#x0A;</string>
+                    <font>fofbb_reg.ttf</font>
+                    <characterSize>48</characterSize>
+                    <color b="255" g="255" r="255" />
+                </object>
+                <object bold="false" italic="false" name="Story" smoothed="true" type="TextObject::Text" underlined="false">
+                    <variables />
+                    <behaviors />
+                    <string>Two students by the name of Jó and Gó who are late for JD are trying to not the be the&#x0A;last to reach the classroom, since whoever is will fail the class, but there is a problem, &#x0A;neither of them knows where the room is and when they arrive at FEUP they notice &#x0A;something strange just happened, the two are now equiped with a sword and a shield&#x0A;and creatures from the other world inhabit the facilities. The two will now have to fight&#x0A;and expel this creatures while trying to figure out what the correct room is.</string>
+                    <font></font>
+                    <characterSize>20</characterSize>
+                    <color b="255" g="255" r="255" />
+                </object>
+                <object bold="true" italic="true" name="Start" smoothed="true" type="TextObject::Text" underlined="false">
+                    <variables />
+                    <behaviors />
+                    <string>Press (b) to start</string>
+                    <font>fofbb_ital.ttf</font>
+                    <characterSize>24</characterSize>
+                    <color b="255" g="255" r="255" />
+                </object>
+                <object name="Background" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="hq-horror-background_102047_12.jpg">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="0.000000" y="0.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+            </objects>
+            <events>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="KeyReleased" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>b</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="BuiltinCommonInstructions::Once" />
+                            <parameters />
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="Scene" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;Corridor&quot;</parameter>
+                                <parameter>true</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+            </events>
+            <layers>
+                <layer name="" visibility="true">
+                    <cameras>
+                        <camera defaultSize="true" defaultViewport="true" height="0.000000" viewportBottom="1.000000" viewportLeft="0.000000" viewportRight="1.000000" viewportTop="0.000000" width="0.000000" />
+                    </cameras>
+                    <effects />
+                </layer>
+            </layers>
+            <behaviorsSharedData />
+        </layout>
+        <layout b="209" disableInputWhenNotFocused="true" mangledName="Corridor" name="Corridor" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
+            <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="1.000000" />
+            <objectsGroups />
+            <variables />
+            <instances />
+            <objects />
+            <events />
             <layers>
                 <layer name="" visibility="true">
                     <cameras>
