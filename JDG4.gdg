@@ -1699,7 +1699,7 @@
                                 <direction looping="false" timeBetweenFrames="1.000000">
                                     <sprites />
                                 </direction>
-                                <direction looping="true" timeBetweenFrames="0.100000">
+                                <direction looping="true" timeBetweenFrames="0.035000">
                                     <sprites>
                                         <sprite hasCustomCollisionMask="true" image="attack_70000.png">
                                             <points />
@@ -1846,7 +1846,7 @@
                                 <direction looping="false" timeBetweenFrames="1.000000">
                                     <sprites />
                                 </direction>
-                                <direction looping="true" timeBetweenFrames="0.100000">
+                                <direction looping="true" timeBetweenFrames="0.035000">
                                     <sprites>
                                         <sprite hasCustomCollisionMask="true" image="attack_50000.png">
                                             <points />
@@ -1993,7 +1993,7 @@
                                 <direction looping="false" timeBetweenFrames="1.000000">
                                     <sprites />
                                 </direction>
-                                <direction looping="true" timeBetweenFrames="0.100000">
+                                <direction looping="true" timeBetweenFrames="0.035000">
                                     <sprites>
                                         <sprite hasCustomCollisionMask="true" image="attack_30000.png">
                                             <points />
@@ -4563,7 +4563,7 @@
                                 <direction looping="false" timeBetweenFrames="1.000000">
                                     <sprites />
                                 </direction>
-                                <direction looping="true" timeBetweenFrames="0.100000">
+                                <direction looping="true" timeBetweenFrames="0.035000">
                                     <sprites>
                                         <sprite hasCustomCollisionMask="true" image="attack_70000.png">
                                             <points />
@@ -4710,7 +4710,7 @@
                                 <direction looping="false" timeBetweenFrames="1.000000">
                                     <sprites />
                                 </direction>
-                                <direction looping="true" timeBetweenFrames="0.100000">
+                                <direction looping="true" timeBetweenFrames="0.035000">
                                     <sprites>
                                         <sprite hasCustomCollisionMask="true" image="attack_50000.png">
                                             <points />
@@ -4857,7 +4857,7 @@
                                 <direction looping="false" timeBetweenFrames="1.000000">
                                     <sprites />
                                 </direction>
-                                <direction looping="true" timeBetweenFrames="0.100000">
+                                <direction looping="true" timeBetweenFrames="0.035000">
                                     <sprites>
                                         <sprite hasCustomCollisionMask="true" image="attack_30000.png">
                                             <points />
@@ -5665,7 +5665,7 @@
                         <action>
                             <type inverted="false" value="SetAnimationName" />
                             <parameters>
-                                <parameter>Player</parameter>
+                                <parameter>Enemy</parameter>
                                 <parameter>&quot;Walk&quot;</parameter>
                             </parameters>
                             <subActions />
@@ -5704,7 +5704,7 @@
                         <action>
                             <type inverted="false" value="SetAnimationName" />
                             <parameters>
-                                <parameter>Player</parameter>
+                                <parameter>Enemy</parameter>
                                 <parameter>&quot;Walk&quot;</parameter>
                             </parameters>
                             <subActions />
@@ -5743,7 +5743,7 @@
                         <action>
                             <type inverted="false" value="SetAnimationName" />
                             <parameters>
-                                <parameter>Player</parameter>
+                                <parameter>Enemy</parameter>
                                 <parameter>&quot;Walk&quot;</parameter>
                             </parameters>
                             <subActions />
@@ -6054,13 +6054,6 @@
                             <subActions />
                         </action>
                         <action>
-                            <type inverted="false" value="PlayAnimation" />
-                            <parameters>
-                                <parameter>Player</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                        <action>
                             <type inverted="false" value="SetAnimationName" />
                             <parameters>
                                 <parameter>Player</parameter>
@@ -6068,165 +6061,15 @@
                             </parameters>
                             <subActions />
                         </action>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
                     </actions>
-                    <events>
-                        <event disabled="false" folded="false">
-                            <type>BuiltinCommonInstructions::Standard</type>
-                            <conditions>
-                                <condition>
-                                    <type inverted="false" value="KeyPressed" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>w</parameter>
-                                    </parameters>
-                                    <subConditions />
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action>
-                                    <type inverted="false" value="TopDownMovementBehavior::SimulateUpKey" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>TopDownMovement</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="SetAnimationName" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>&quot;Walk&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="PlayAnimation" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                            </actions>
-                            <events />
-                        </event>
-                        <event disabled="false" folded="false">
-                            <type>BuiltinCommonInstructions::Standard</type>
-                            <conditions>
-                                <condition>
-                                    <type inverted="false" value="KeyPressed" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>a</parameter>
-                                    </parameters>
-                                    <subConditions />
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action>
-                                    <type inverted="false" value="TopDownMovementBehavior::SimulateLeftKey" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>TopDownMovement</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="SetAnimationName" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>&quot;Walk&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="PlayAnimation" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                            </actions>
-                            <events />
-                        </event>
-                        <event disabled="false" folded="false">
-                            <type>BuiltinCommonInstructions::Standard</type>
-                            <conditions>
-                                <condition>
-                                    <type inverted="false" value="KeyPressed" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>s</parameter>
-                                    </parameters>
-                                    <subConditions />
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action>
-                                    <type inverted="false" value="TopDownMovementBehavior::SimulateDownKey" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>TopDownMovement</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="SetAnimationName" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>&quot;Walk&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="PlayAnimation" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                            </actions>
-                            <events />
-                        </event>
-                        <event disabled="false" folded="false">
-                            <type>BuiltinCommonInstructions::Standard</type>
-                            <conditions>
-                                <condition>
-                                    <type inverted="false" value="KeyPressed" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>d</parameter>
-                                    </parameters>
-                                    <subConditions />
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action>
-                                    <type inverted="false" value="TopDownMovementBehavior::SimulateRightKey" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>TopDownMovement</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="SetAnimationName" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>&quot;Walk&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="PlayAnimation" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                            </actions>
-                            <events />
-                        </event>
-                    </events>
+                    <events />
                 </event>
                 <event disabled="false" folded="false">
                     <type>BuiltinCommonInstructions::Standard</type>
@@ -9554,7 +9397,7 @@
                                 <direction looping="false" timeBetweenFrames="1.000000">
                                     <sprites />
                                 </direction>
-                                <direction looping="true" timeBetweenFrames="0.100000">
+                                <direction looping="true" timeBetweenFrames="0.035000">
                                     <sprites>
                                         <sprite hasCustomCollisionMask="true" image="attack_70000.png">
                                             <points />
@@ -9701,7 +9544,7 @@
                                 <direction looping="false" timeBetweenFrames="1.000000">
                                     <sprites />
                                 </direction>
-                                <direction looping="true" timeBetweenFrames="0.100000">
+                                <direction looping="true" timeBetweenFrames="0.035000">
                                     <sprites>
                                         <sprite hasCustomCollisionMask="true" image="attack_50000.png">
                                             <points />
@@ -9848,7 +9691,7 @@
                                 <direction looping="false" timeBetweenFrames="1.000000">
                                     <sprites />
                                 </direction>
-                                <direction looping="true" timeBetweenFrames="0.100000">
+                                <direction looping="true" timeBetweenFrames="0.035000">
                                     <sprites>
                                         <sprite hasCustomCollisionMask="true" image="attack_30000.png">
                                             <points />
@@ -12418,7 +12261,7 @@
                                 <direction looping="false" timeBetweenFrames="1.000000">
                                     <sprites />
                                 </direction>
-                                <direction looping="true" timeBetweenFrames="0.100000">
+                                <direction looping="true" timeBetweenFrames="0.035000">
                                     <sprites>
                                         <sprite hasCustomCollisionMask="true" image="attack_70000.png">
                                             <points />
@@ -12565,7 +12408,7 @@
                                 <direction looping="false" timeBetweenFrames="1.000000">
                                     <sprites />
                                 </direction>
-                                <direction looping="true" timeBetweenFrames="0.100000">
+                                <direction looping="true" timeBetweenFrames="0.035000">
                                     <sprites>
                                         <sprite hasCustomCollisionMask="true" image="attack_50000.png">
                                             <points />
@@ -12712,7 +12555,7 @@
                                 <direction looping="false" timeBetweenFrames="1.000000">
                                     <sprites />
                                 </direction>
-                                <direction looping="true" timeBetweenFrames="0.100000">
+                                <direction looping="true" timeBetweenFrames="0.035000">
                                     <sprites>
                                         <sprite hasCustomCollisionMask="true" image="attack_30000.png">
                                             <points />
@@ -13520,7 +13363,7 @@
                         <action>
                             <type inverted="false" value="SetAnimationName" />
                             <parameters>
-                                <parameter>Player</parameter>
+                                <parameter>Enemy</parameter>
                                 <parameter>&quot;Walk&quot;</parameter>
                             </parameters>
                             <subActions />
@@ -13559,7 +13402,7 @@
                         <action>
                             <type inverted="false" value="SetAnimationName" />
                             <parameters>
-                                <parameter>Player</parameter>
+                                <parameter>Enemy</parameter>
                                 <parameter>&quot;Walk&quot;</parameter>
                             </parameters>
                             <subActions />
@@ -13598,7 +13441,7 @@
                         <action>
                             <type inverted="false" value="SetAnimationName" />
                             <parameters>
-                                <parameter>Player</parameter>
+                                <parameter>Enemy</parameter>
                                 <parameter>&quot;Walk&quot;</parameter>
                             </parameters>
                             <subActions />
@@ -13924,164 +13767,7 @@
                             <subActions />
                         </action>
                     </actions>
-                    <events>
-                        <event disabled="false" folded="false">
-                            <type>BuiltinCommonInstructions::Standard</type>
-                            <conditions>
-                                <condition>
-                                    <type inverted="false" value="KeyPressed" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>w</parameter>
-                                    </parameters>
-                                    <subConditions />
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action>
-                                    <type inverted="false" value="TopDownMovementBehavior::SimulateUpKey" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>TopDownMovement</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="SetAnimationName" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>&quot;Walk&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="PlayAnimation" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                            </actions>
-                            <events />
-                        </event>
-                        <event disabled="false" folded="false">
-                            <type>BuiltinCommonInstructions::Standard</type>
-                            <conditions>
-                                <condition>
-                                    <type inverted="false" value="KeyPressed" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>a</parameter>
-                                    </parameters>
-                                    <subConditions />
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action>
-                                    <type inverted="false" value="TopDownMovementBehavior::SimulateLeftKey" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>TopDownMovement</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="SetAnimationName" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>&quot;Walk&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="PlayAnimation" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                            </actions>
-                            <events />
-                        </event>
-                        <event disabled="false" folded="false">
-                            <type>BuiltinCommonInstructions::Standard</type>
-                            <conditions>
-                                <condition>
-                                    <type inverted="false" value="KeyPressed" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>s</parameter>
-                                    </parameters>
-                                    <subConditions />
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action>
-                                    <type inverted="false" value="TopDownMovementBehavior::SimulateDownKey" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>TopDownMovement</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="SetAnimationName" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>&quot;Walk&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="PlayAnimation" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                            </actions>
-                            <events />
-                        </event>
-                        <event disabled="false" folded="false">
-                            <type>BuiltinCommonInstructions::Standard</type>
-                            <conditions>
-                                <condition>
-                                    <type inverted="false" value="KeyPressed" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>d</parameter>
-                                    </parameters>
-                                    <subConditions />
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action>
-                                    <type inverted="false" value="TopDownMovementBehavior::SimulateRightKey" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>TopDownMovement</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="SetAnimationName" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>&quot;Walk&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="PlayAnimation" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                            </actions>
-                            <events />
-                        </event>
-                    </events>
+                    <events />
                 </event>
                 <event disabled="false" folded="false">
                     <type>BuiltinCommonInstructions::Standard</type>
@@ -15924,13 +15610,13 @@
                                         <sprite hasCustomCollisionMask="false" image="hq-horror-background_102047_12.jpg">
                                             <points />
                                             <originPoint name="origine" x="0.000000" y="0.000000" />
-                                            <centerPoint automatic="true" name="centre" x="1280.000000" y="800.000000" />
+                                            <centerPoint automatic="true" name="centre" x="0.000000" y="0.000000" />
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="2560.000000" y="0.000000" />
-                                                    <vertice x="2560.000000" y="1600.000000" />
-                                                    <vertice x="0.000000" y="1600.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
