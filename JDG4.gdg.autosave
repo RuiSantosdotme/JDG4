@@ -280,6 +280,7 @@
         <variable name="EnemyLife" value="100" />
         <variable name="PlayerScore" value="0" />
         <variable name="EnemyScore" value="0" />
+        <variable name="DoorDestroyed" value="1" />
     </variables>
     <layouts>
         <layout b="209" disableInputWhenNotFocused="true" mangledName="Sala_32lvl1" name="Sala lvl1" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
@@ -6405,6 +6406,17 @@
                             </parameters>
                             <subActions />
                         </action>
+                        <action>
+                            <type inverted="false" value="PlaySound" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>SoundEffects\shoot.wav</parameter>
+                                <parameter></parameter>
+                                <parameter>25</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
                     </actions>
                     <events />
                 </event>
@@ -6500,6 +6512,17 @@
                             </parameters>
                             <subActions />
                         </action>
+                        <action>
+                            <type inverted="false" value="PlaySound" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>SoundEffects\shoot.wav</parameter>
+                                <parameter></parameter>
+                                <parameter>25</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
                     </actions>
                     <events />
                 </event>
@@ -6595,6 +6618,17 @@
                             </parameters>
                             <subActions />
                         </action>
+                        <action>
+                            <type inverted="false" value="PlaySound" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>SoundEffects\shoot.wav</parameter>
+                                <parameter></parameter>
+                                <parameter>25</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
                     </actions>
                     <events />
                 </event>
@@ -6687,6 +6721,17 @@
                                 <parameter>EnemyScore</parameter>
                                 <parameter>+</parameter>
                                 <parameter>100</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlaySound" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>SoundEffects\shoot.wav</parameter>
+                                <parameter></parameter>
+                                <parameter>25</parameter>
+                                <parameter></parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -6850,6 +6895,15 @@
                             </parameters>
                             <subConditions />
                         </condition>
+                        <condition>
+                            <type inverted="false" value="VarGlobal" />
+                            <parameters>
+                                <parameter>DoorDestroyed</parameter>
+                                <parameter>&gt;</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
                     </conditions>
                     <actions>
                         <action>
@@ -6857,6 +6911,26 @@
                             <parameters>
                                 <parameter>Door</parameter>
                                 <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlaySound" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>SoundEffects\door_unlock.wav</parameter>
+                                <parameter></parameter>
+                                <parameter>10</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarGlobal" />
+                            <parameters>
+                                <parameter>DoorDestroyed</parameter>
+                                <parameter>-</parameter>
+                                <parameter>1</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -7145,7 +7219,7 @@
                             <parameters>
                                 <parameter>PlayerScore</parameter>
                                 <parameter>=</parameter>
-                                <parameter>&quot;PlayerScore: &quot;+ToString(round(GlobalVariable(PlayerScore)))</parameter>
+                                <parameter>&quot;Player Score: &quot;+ToString(round(GlobalVariable(PlayerScore)))</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -7170,7 +7244,7 @@
                             <parameters>
                                 <parameter>EnemyScore</parameter>
                                 <parameter>=</parameter>
-                                <parameter>&quot;EnemyScore: &quot;+ToString(round(GlobalVariable(EnemyScore)))</parameter>
+                                <parameter>&quot;Enemy Score: &quot;+ToString(round(GlobalVariable(EnemyScore)))</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -7272,6 +7346,17 @@
                             </parameters>
                             <subActions />
                         </action>
+                        <action>
+                            <type inverted="false" value="PlaySound" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>SoundEffects\collect_item_1.wav</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
                     </actions>
                     <events />
                 </event>
@@ -7312,6 +7397,17 @@
                             <type inverted="false" value="Delete" />
                             <parameters>
                                 <parameter>Healthdrop</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlaySound" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>SoundEffects\collect_item_1.wav</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
                                 <parameter></parameter>
                             </parameters>
                             <subActions />
@@ -7334,9 +7430,9 @@
                         <condition>
                             <type inverted="false" value="VarScene" />
                             <parameters>
-                                <parameter>Healthdrop</parameter>
+                                <parameter>Trap</parameter>
                                 <parameter>&lt;</parameter>
-                                <parameter>2</parameter>
+                                <parameter>3</parameter>
                             </parameters>
                             <subConditions />
                         </condition>
@@ -7346,7 +7442,7 @@
                             <type inverted="false" value="ResetTimer" />
                             <parameters>
                                 <parameter></parameter>
-                                <parameter>&quot;HealthCreation&quot;</parameter>
+                                <parameter>&quot;TrapCreation&quot;</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -7354,7 +7450,7 @@
                             <type inverted="false" value="Create" />
                             <parameters>
                                 <parameter></parameter>
-                                <parameter>Healthdrop</parameter>
+                                <parameter>Trap</parameter>
                                 <parameter>Random(750)</parameter>
                                 <parameter>Random(600)</parameter>
                                 <parameter></parameter>
@@ -7364,7 +7460,7 @@
                         <action>
                             <type inverted="false" value="ModVarScene" />
                             <parameters>
-                                <parameter>Healthdrop</parameter>
+                                <parameter>Trap</parameter>
                                 <parameter>+</parameter>
                                 <parameter>1</parameter>
                             </parameters>
@@ -7380,7 +7476,7 @@
                             <type inverted="false" value="CollisionNP" />
                             <parameters>
                                 <parameter>Player</parameter>
-                                <parameter>Healthdrop</parameter>
+                                <parameter>Trap</parameter>
                                 <parameter></parameter>
                                 <parameter></parameter>
                             </parameters>
@@ -7391,7 +7487,7 @@
                         <action>
                             <type inverted="false" value="ModVarScene" />
                             <parameters>
-                                <parameter>Healthdrop</parameter>
+                                <parameter>Trap</parameter>
                                 <parameter>-</parameter>
                                 <parameter>1</parameter>
                             </parameters>
@@ -7401,7 +7497,7 @@
                             <type inverted="false" value="ModVarGlobal" />
                             <parameters>
                                 <parameter>PlayerLife</parameter>
-                                <parameter>+</parameter>
+                                <parameter>-</parameter>
                                 <parameter>25</parameter>
                             </parameters>
                             <subActions />
@@ -7409,7 +7505,18 @@
                         <action>
                             <type inverted="false" value="Delete" />
                             <parameters>
-                                <parameter>Healthdrop</parameter>
+                                <parameter>Trap</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlaySound" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>SoundEffects\hit_3.wav</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
                                 <parameter></parameter>
                             </parameters>
                             <subActions />
@@ -7424,7 +7531,7 @@
                             <type inverted="false" value="CollisionNP" />
                             <parameters>
                                 <parameter>Enemy</parameter>
-                                <parameter>Healthdrop</parameter>
+                                <parameter>Trap</parameter>
                                 <parameter></parameter>
                                 <parameter></parameter>
                             </parameters>
@@ -7445,7 +7552,7 @@
                             <type inverted="false" value="ModVarGlobal" />
                             <parameters>
                                 <parameter>EnemyLife</parameter>
-                                <parameter>+</parameter>
+                                <parameter>-</parameter>
                                 <parameter>25</parameter>
                             </parameters>
                             <subActions />
@@ -7453,7 +7560,18 @@
                         <action>
                             <type inverted="false" value="Delete" />
                             <parameters>
-                                <parameter>Healthdrop</parameter>
+                                <parameter>Trap</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlaySound" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>SoundEffects\hit_3.wav</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
                                 <parameter></parameter>
                             </parameters>
                             <subActions />
@@ -7463,8 +7581,28 @@
                 </event>
                 <event disabled="false" folded="false">
                     <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="DepartScene" />
+                            <parameters>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="PlaySound" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>BackgroundMusic\level.wav</parameter>
+                                <parameter>yes</parameter>
+                                <parameter>10</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
                     <events />
                 </event>
             </events>
@@ -7611,13 +7749,13 @@
                                         <sprite hasCustomCollisionMask="false" image="hq-horror-background_102047_12.jpg">
                                             <points />
                                             <originPoint name="origine" x="0.000000" y="0.000000" />
-                                            <centerPoint automatic="true" name="centre" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="1280.000000" y="800.000000" />
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="2560.000000" y="0.000000" />
+                                                    <vertice x="2560.000000" y="1600.000000" />
+                                                    <vertice x="0.000000" y="1600.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -7653,6 +7791,32 @@
                                 <parameter></parameter>
                                 <parameter>&quot;Corridor&quot;</parameter>
                                 <parameter>true</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="DepartScene" />
+                            <parameters>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="PlaySound" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>BackgroundMusic\loading_game.wav</parameter>
+                                <parameter>yes</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
                             </parameters>
                             <subActions />
                         </action>
