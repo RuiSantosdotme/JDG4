@@ -614,6 +614,9 @@
             <resource alwaysLoaded="false" file="assets/wall_sides.png" kind="image" name="wall_sides.png" smoothed="true" userAdded="true" />
             <resource alwaysLoaded="false" file="assets/wall_21.png" kind="image" name="wall_21.png" smoothed="true" userAdded="true" />
             <resource alwaysLoaded="false" file="assets/screens/start-04.png" kind="image" name="start-04.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="assets/screens/P1win.png" kind="image" name="P1win.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="assets/screens/gameover.png" kind="image" name="gameover.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="assets/screens/P2win.png" kind="image" name="P2win.png" smoothed="true" userAdded="true" />
         </resources>
         <resourceFolders>
             <folder name="Player2">
@@ -11358,7 +11361,7 @@
                 <variable name="Trap" value="0" />
             </variables>
             <instances>
-                <instance angle="0.000000" customSize="true" height="289.000000" layer="" locked="true" name="Floor" width="797.000000" x="1.000031" y="143.000000" zOrder="-3">
+                <instance angle="0.000000" customSize="true" height="464.000000" layer="" locked="true" name="Floor" width="797.000000" x="1.000031" y="143.000000" zOrder="-3">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -11373,7 +11376,7 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="188.000000" layer="" locked="true" name="Wall" width="799.000061" x="0.000000" y="420.000000" zOrder="1">
+                <instance angle="0.000000" customSize="true" height="188.000000" layer="" locked="false" name="Wall" width="325.000092" x="0.000000" y="420.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -11449,6 +11452,16 @@
                     <initialVariables />
                 </instance>
                 <instance angle="0.000000" customSize="true" height="203.000000" layer="" locked="false" name="Door" width="50.000000" x="-48.999924" y="218.000000" zOrder="18">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="true" height="188.000000" layer="" locked="false" name="Wall" width="325.000092" x="474.000031" y="419.000000" zOrder="1">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="true" height="186.000000" layer="" locked="false" name="Door" width="148.000061" x="325.000031" y="420.000000" zOrder="19">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -15312,6 +15325,14 @@
                             </parameters>
                             <subActions />
                         </action>
+                        <action>
+                            <type inverted="false" value="Delete" />
+                            <parameters>
+                                <parameter>Door</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
                     </actions>
                     <events />
                 </event>
@@ -15351,6 +15372,14 @@
                             </parameters>
                             <subActions />
                         </action>
+                        <action>
+                            <type inverted="false" value="Delete" />
+                            <parameters>
+                                <parameter>Door</parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
                     </actions>
                     <events />
                 </event>
@@ -15400,6 +15429,56 @@
                             <parameters>
                                 <parameter>Player</parameter>
                                 <parameter>Door</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="PosY" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&gt;</parameter>
+                                <parameter>610</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="PushScene" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;P1W&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="PosY" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>&gt;</parameter>
+                                <parameter>610</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="PushScene" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;P2W&quot;</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -33615,6 +33694,174 @@
                 <behaviorSharedData name="PathfindingObstacle5" type="PathfindingBehavior::PathfindingObstacleBehavior" />
                 <behaviorSharedData name="PathfindingObstacle6" type="PathfindingBehavior::PathfindingObstacleBehavior" />
                 <behaviorSharedData name="PathfindingObstacle7" type="PathfindingBehavior::PathfindingObstacleBehavior" />
+                <behaviorSharedData name="TopDownMovement" type="TopDownMovementBehavior::TopDownMovementBehavior" />
+            </behaviorsSharedData>
+        </layout>
+        <layout b="209" disableInputWhenNotFocused="true" mangledName="P1W" name="P1W" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
+            <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="1.000000" />
+            <objectsGroups />
+            <variables />
+            <instances>
+                <instance angle="0.000000" customSize="true" height="600.000000" layer="" locked="false" name="Background" width="800.000000" x="-1.000000" y="1.000000" zOrder="-3">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+            </instances>
+            <objects>
+                <object name="Background" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="P1win.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="400.000000" y="300.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="800.000000" y="0.000000" />
+                                                    <vertice x="800.000000" y="600.000000" />
+                                                    <vertice x="0.000000" y="600.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+            </objects>
+            <events>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="KeyReleased" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>Space</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="BuiltinCommonInstructions::Once" />
+                            <parameters />
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="Scene" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;StartScreen&quot;</parameter>
+                                <parameter>true</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+            </events>
+            <layers>
+                <layer name="" visibility="true">
+                    <cameras>
+                        <camera defaultSize="true" defaultViewport="true" height="0.000000" viewportBottom="1.000000" viewportLeft="0.000000" viewportRight="1.000000" viewportTop="0.000000" width="0.000000" />
+                    </cameras>
+                    <effects />
+                </layer>
+            </layers>
+            <behaviorsSharedData>
+                <behaviorSharedData name="TopDownMovement" type="TopDownMovementBehavior::TopDownMovementBehavior" />
+            </behaviorsSharedData>
+        </layout>
+        <layout b="209" disableInputWhenNotFocused="true" mangledName="P2W" name="P2W" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
+            <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="1.000000" />
+            <objectsGroups />
+            <variables />
+            <instances>
+                <instance angle="0.000000" customSize="true" height="600.000000" layer="" locked="false" name="Background" width="800.000000" x="-1.000000" y="1.000000" zOrder="-3">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+            </instances>
+            <objects>
+                <object name="Background" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="P2win.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="400.500000" y="300.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="801.000000" y="0.000000" />
+                                                    <vertice x="801.000000" y="600.000000" />
+                                                    <vertice x="0.000000" y="600.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+            </objects>
+            <events>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="KeyReleased" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>Space</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="BuiltinCommonInstructions::Once" />
+                            <parameters />
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="Scene" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;StartScreen&quot;</parameter>
+                                <parameter>true</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+            </events>
+            <layers>
+                <layer name="" visibility="true">
+                    <cameras>
+                        <camera defaultSize="true" defaultViewport="true" height="0.000000" viewportBottom="1.000000" viewportLeft="0.000000" viewportRight="1.000000" viewportTop="0.000000" width="0.000000" />
+                    </cameras>
+                    <effects />
+                </layer>
+            </layers>
+            <behaviorsSharedData>
                 <behaviorSharedData name="TopDownMovement" type="TopDownMovementBehavior::TopDownMovementBehavior" />
             </behaviorsSharedData>
         </layout>
