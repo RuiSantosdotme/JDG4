@@ -610,6 +610,10 @@
             <resource alwaysLoaded="false" file="sprites/Hero2/Walk/walk_70007 - Cópia.png" kind="image" name="walk_70007 - Cópia.png" smoothed="true" userAdded="true" />
             <resource alwaysLoaded="false" file="sprites/Hero2/Walk/walk_70008 - Cópia.png" kind="image" name="walk_70008 - Cópia.png" smoothed="true" userAdded="true" />
             <resource alwaysLoaded="false" file="sprites/Hero2/Walk/walk_70009 - Cópia.png" kind="image" name="walk_70009 - Cópia.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="assets/Floor Texture32x32.jpg" kind="image" name="Floor Texture32x32.jpg" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="assets/wall_sides.png" kind="image" name="wall_sides.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="assets/wall_21.png" kind="image" name="wall_21.png" smoothed="true" userAdded="true" />
+            <resource alwaysLoaded="false" file="assets/screens/start-04.png" kind="image" name="start-04.png" smoothed="true" userAdded="true" />
         </resources>
         <resourceFolders>
             <folder name="Player2">
@@ -6809,11 +6813,6 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="CopyOfWall" width="0.000000" x="352.000000" y="0.000000" zOrder="2">
-                    <numberProperties />
-                    <stringProperties />
-                    <initialVariables />
-                </instance>
                 <instance angle="0.000000" customSize="true" height="128.000000" layer="" locked="true" name="Door" width="32.000000" x="767.000000" y="257.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
@@ -8119,13 +8118,13 @@
                                         <sprite hasCustomCollisionMask="false" image="0_down.png">
                                             <points />
                                             <originPoint name="origine" x="0.000000" y="0.000000" />
-                                            <centerPoint automatic="true" name="centre" x="16.000000" y="32.000000" />
+                                            <centerPoint automatic="true" name="centre" x="9.000000" y="8.500000" />
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="32.000000" y="0.000000" />
-                                                    <vertice x="32.000000" y="64.000000" />
-                                                    <vertice x="0.000000" y="64.000000" />
+                                                    <vertice x="18.000000" y="0.000000" />
+                                                    <vertice x="18.000000" y="17.000000" />
+                                                    <vertice x="0.000000" y="17.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -11384,11 +11383,6 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="CopyOfWall" width="0.000000" x="352.000000" y="0.000000" zOrder="2">
-                    <numberProperties />
-                    <stringProperties />
-                    <initialVariables />
-                </instance>
                 <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Player1_ui" width="0.000000" x="154.000000" y="54.000000" zOrder="10">
                     <numberProperties />
                     <stringProperties />
@@ -12023,11 +12017,11 @@
                         </animation>
                     </animations>
                 </object>
-                <object height="64.000000" name="Floor" texture="floor.png" type="TiledSpriteObject::TiledSprite" width="64.000000">
+                <object height="64.000000" name="Floor" texture="Floor Texture32x32.jpg" type="TiledSpriteObject::TiledSprite" width="64.000000">
                     <variables />
                     <behaviors />
                 </object>
-                <object height="64.000000" name="Wall" texture="wall_2.png" type="TiledSpriteObject::TiledSprite" width="64.000000">
+                <object height="32.000000" name="Wall" texture="wall_2.png" type="TiledSpriteObject::TiledSprite" width="32.000000">
                     <variables />
                     <behaviors>
                         <behavior cost="2.000000" impassable="true" name="PathfindingObstacle" type="PathfindingBehavior::PathfindingObstacleBehavior" />
@@ -12709,13 +12703,13 @@
                                         <sprite hasCustomCollisionMask="false" image="0_down.png">
                                             <points />
                                             <originPoint name="origine" x="0.000000" y="0.000000" />
-                                            <centerPoint automatic="true" name="centre" x="16.000000" y="32.000000" />
+                                            <centerPoint automatic="true" name="centre" x="9.000000" y="8.500000" />
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="32.000000" y="0.000000" />
-                                                    <vertice x="32.000000" y="64.000000" />
-                                                    <vertice x="0.000000" y="64.000000" />
+                                                    <vertice x="18.000000" y="0.000000" />
+                                                    <vertice x="18.000000" y="17.000000" />
+                                                    <vertice x="0.000000" y="17.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -15520,17 +15514,12 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Player" width="160.000000" x="68.000023" y="239.000000" zOrder="16">
+                <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Player" width="160.000000" x="30.000044" y="240.000000" zOrder="16">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="0.000000" layer="" locked="false" name="Enemy" width="160.000000" x="592.000122" y="368.000000" zOrder="17">
-                    <numberProperties />
-                    <stringProperties />
-                    <initialVariables />
-                </instance>
-                <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Enemy" width="160.000000" x="72.000046" y="339.000000" zOrder="18">
+                <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Enemy" width="160.000000" x="16.999973" y="331.000000" zOrder="17">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -16785,13 +16774,13 @@
                                         <sprite hasCustomCollisionMask="false" image="0_down.png">
                                             <points />
                                             <originPoint name="origine" x="0.000000" y="0.000000" />
-                                            <centerPoint automatic="true" name="centre" x="16.000000" y="32.000000" />
+                                            <centerPoint automatic="true" name="centre" x="9.000000" y="8.500000" />
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="32.000000" y="0.000000" />
-                                                    <vertice x="32.000000" y="64.000000" />
-                                                    <vertice x="0.000000" y="64.000000" />
+                                                    <vertice x="18.000000" y="0.000000" />
+                                                    <vertice x="18.000000" y="17.000000" />
+                                                    <vertice x="0.000000" y="17.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -19583,7 +19572,7 @@
                             <type inverted="false" value="Scene" />
                             <parameters>
                                 <parameter></parameter>
-                                <parameter>&quot;Sala lvl1&quot;</parameter>
+                                <parameter>&quot;Sala lvl2&quot;</parameter>
                                 <parameter>true</parameter>
                             </parameters>
                             <subActions />
@@ -19618,7 +19607,7 @@
                             <type inverted="false" value="Scene" />
                             <parameters>
                                 <parameter></parameter>
-                                <parameter>&quot;Sala lvl1&quot;</parameter>
+                                <parameter>&quot;Sala lvl2&quot;</parameter>
                                 <parameter>true</parameter>
                             </parameters>
                             <subActions />
@@ -19771,11 +19760,6 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="CopyOfWall" width="0.000000" x="352.000000" y="0.000000" zOrder="2">
-                    <numberProperties />
-                    <stringProperties />
-                    <initialVariables />
-                </instance>
                 <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Player1_ui" width="0.000000" x="154.000000" y="54.000000" zOrder="10">
                     <numberProperties />
                     <stringProperties />
@@ -19826,7 +19810,7 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Player" width="160.000000" x="-4.999943" y="238.000000" zOrder="16">
+                <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Player" width="160.000000" x="-4.999943" y="239.000000" zOrder="16">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -21086,13 +21070,13 @@
                                         <sprite hasCustomCollisionMask="false" image="0_down.png">
                                             <points />
                                             <originPoint name="origine" x="0.000000" y="0.000000" />
-                                            <centerPoint automatic="true" name="centre" x="16.000000" y="32.000000" />
+                                            <centerPoint automatic="true" name="centre" x="9.000000" y="8.500000" />
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="32.000000" y="0.000000" />
-                                                    <vertice x="32.000000" y="64.000000" />
-                                                    <vertice x="0.000000" y="64.000000" />
+                                                    <vertice x="18.000000" y="0.000000" />
+                                                    <vertice x="18.000000" y="17.000000" />
+                                                    <vertice x="0.000000" y="17.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -25486,13 +25470,13 @@
                                         <sprite hasCustomCollisionMask="false" image="0_down.png">
                                             <points />
                                             <originPoint name="origine" x="0.000000" y="0.000000" />
-                                            <centerPoint automatic="true" name="centre" x="16.000000" y="32.000000" />
+                                            <centerPoint automatic="true" name="centre" x="9.000000" y="8.500000" />
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="32.000000" y="0.000000" />
-                                                    <vertice x="32.000000" y="64.000000" />
-                                                    <vertice x="0.000000" y="64.000000" />
+                                                    <vertice x="18.000000" y="0.000000" />
+                                                    <vertice x="18.000000" y="17.000000" />
+                                                    <vertice x="0.000000" y="17.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -28795,7 +28779,9 @@
                     <effects />
                 </layer>
             </layers>
-            <behaviorsSharedData />
+            <behaviorsSharedData>
+                <behaviorSharedData name="TopDownMovement" type="TopDownMovementBehavior::TopDownMovementBehavior" />
+            </behaviorsSharedData>
         </layout>
         <layout b="209" disableInputWhenNotFocused="true" mangledName="Sala_32lvl2" name="Sala lvl2" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
             <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="1.000000" />
@@ -29598,7 +29584,7 @@
                         </animation>
                     </animations>
                 </object>
-                <object height="64.000000" name="Floor" texture="floor.png" type="TiledSpriteObject::TiledSprite" width="64.000000">
+                <object height="64.000000" name="Floor" texture="Floor Texture32x32.jpg" type="TiledSpriteObject::TiledSprite" width="64.000000">
                     <variables />
                     <behaviors />
                 </object>
@@ -30284,13 +30270,13 @@
                                         <sprite hasCustomCollisionMask="false" image="0_down.png">
                                             <points />
                                             <originPoint name="origine" x="0.000000" y="0.000000" />
-                                            <centerPoint automatic="true" name="centre" x="16.000000" y="32.000000" />
+                                            <centerPoint automatic="true" name="centre" x="9.000000" y="8.500000" />
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="32.000000" y="0.000000" />
-                                                    <vertice x="32.000000" y="64.000000" />
-                                                    <vertice x="0.000000" y="64.000000" />
+                                                    <vertice x="18.000000" y="0.000000" />
+                                                    <vertice x="18.000000" y="17.000000" />
+                                                    <vertice x="0.000000" y="17.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -33632,57 +33618,18 @@
                 <behaviorSharedData name="TopDownMovement" type="TopDownMovementBehavior::TopDownMovementBehavior" />
             </behaviorsSharedData>
         </layout>
-        <layout b="209" disableInputWhenNotFocused="true" mangledName="StarScreen" name="StarScreen" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
+        <layout b="209" disableInputWhenNotFocused="true" mangledName="StartScreen" name="StartScreen" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
             <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="1.000000" />
             <objectsGroups />
             <variables />
             <instances>
-                <instance angle="0.000000" customSize="true" height="82.999992" layer="" locked="false" name="NewObject" width="315.000000" x="249.000000" y="61.499992" zOrder="1">
-                    <numberProperties />
-                    <stringProperties />
-                    <initialVariables />
-                </instance>
-                <instance angle="0.000000" customSize="true" height="160.000000" layer="" locked="false" name="Story" width="793.000000" x="3.999985" y="181.500000" zOrder="2">
-                    <numberProperties />
-                    <stringProperties />
-                    <initialVariables />
-                </instance>
-                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Start" width="0.000000" x="298.000000" y="441.500000" zOrder="3">
-                    <numberProperties />
-                    <stringProperties />
-                    <initialVariables />
-                </instance>
-                <instance angle="0.000000" customSize="true" height="600.000000" layer="" locked="true" name="Background" width="800.000000" x="0.000000" y="0.000000" zOrder="-3">
+                <instance angle="0.000000" customSize="true" height="600.000000" layer="" locked="false" name="Background" width="800.000000" x="-1.000000" y="1.000000" zOrder="-3">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
             </instances>
             <objects>
-                <object bold="false" italic="false" name="NewObject" smoothed="true" type="TextObject::Text" underlined="false">
-                    <variables />
-                    <behaviors />
-                    <string>THE LAST SEAT&#x0A;&#x0A;&#x0A;&#x0A;</string>
-                    <font>fofbb_reg.ttf</font>
-                    <characterSize>48</characterSize>
-                    <color b="255" g="255" r="255" />
-                </object>
-                <object bold="false" italic="false" name="Story" smoothed="true" type="TextObject::Text" underlined="false">
-                    <variables />
-                    <behaviors />
-                    <string>Two students by the name of Jó and Gó who are late for JD are trying to not the be the&#x0A;last to reach the classroom, since whoever is will fail the class, but there is a problem, &#x0A;neither of them knows where the room is and when they arrive at FEUP they notice &#x0A;something strange just happened, the two are now equiped with a sword and a shield&#x0A;and creatures from the other world inhabit the facilities. The two will now have to fight&#x0A;and expel this creatures while trying to figure out what the correct room is.</string>
-                    <font></font>
-                    <characterSize>20</characterSize>
-                    <color b="255" g="255" r="255" />
-                </object>
-                <object bold="true" italic="true" name="Start" smoothed="true" type="TextObject::Text" underlined="false">
-                    <variables />
-                    <behaviors />
-                    <string>Press (b) to start</string>
-                    <font>fofbb_ital.ttf</font>
-                    <characterSize>24</characterSize>
-                    <color b="255" g="255" r="255" />
-                </object>
                 <object name="Background" type="Sprite">
                     <variables />
                     <behaviors />
@@ -33691,16 +33638,16 @@
                             <directions>
                                 <direction looping="false" timeBetweenFrames="1.000000">
                                     <sprites>
-                                        <sprite hasCustomCollisionMask="false" image="hq-horror-background_102047_12.jpg">
+                                        <sprite hasCustomCollisionMask="false" image="start-04.png">
                                             <points />
                                             <originPoint name="origine" x="0.000000" y="0.000000" />
-                                            <centerPoint automatic="true" name="centre" x="1280.000000" y="800.000000" />
+                                            <centerPoint automatic="true" name="centre" x="400.500000" y="300.000000" />
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="2560.000000" y="0.000000" />
-                                                    <vertice x="2560.000000" y="1600.000000" />
-                                                    <vertice x="0.000000" y="1600.000000" />
+                                                    <vertice x="801.000000" y="0.000000" />
+                                                    <vertice x="801.000000" y="600.000000" />
+                                                    <vertice x="0.000000" y="600.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
@@ -33719,7 +33666,7 @@
                             <type inverted="false" value="KeyReleased" />
                             <parameters>
                                 <parameter></parameter>
-                                <parameter>b</parameter>
+                                <parameter>Space</parameter>
                             </parameters>
                             <subConditions />
                         </condition>
@@ -33777,7 +33724,9 @@
                     <effects />
                 </layer>
             </layers>
-            <behaviorsSharedData />
+            <behaviorsSharedData>
+                <behaviorSharedData name="TopDownMovement" type="TopDownMovementBehavior::TopDownMovementBehavior" />
+            </behaviorsSharedData>
         </layout>
     </layouts>
     <externalEvents />
