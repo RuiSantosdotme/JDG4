@@ -21360,6 +21360,13 @@
                             <subActions />
                         </action>
                         <action>
+                            <type inverted="false" value="Cache" />
+                            <parameters>
+                                <parameter>Healthdrop</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
                             <type inverted="false" value="ModVarScene" />
                             <parameters>
                                 <parameter>Healthdrop</parameter>
@@ -21369,7 +21376,104 @@
                             <subActions />
                         </action>
                     </actions>
-                    <events />
+                    <events>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="true" value="CollisionNP" />
+                                    <parameters>
+                                        <parameter>Healthdrop</parameter>
+                                        <parameter>Wall</parameter>
+                                        <parameter></parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="true" value="CollisionNP" />
+                                    <parameters>
+                                        <parameter>Healthdrop</parameter>
+                                        <parameter>Table2</parameter>
+                                        <parameter></parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="true" value="CollisionNP" />
+                                    <parameters>
+                                        <parameter>Healthdrop</parameter>
+                                        <parameter>Table3</parameter>
+                                        <parameter></parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="true" value="CollisionNP" />
+                                    <parameters>
+                                        <parameter>Healthdrop</parameter>
+                                        <parameter>Table</parameter>
+                                        <parameter></parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="true" value="CollisionNP" />
+                                    <parameters>
+                                        <parameter>Healthdrop</parameter>
+                                        <parameter>Wall_lights</parameter>
+                                        <parameter></parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="true" value="CollisionNP" />
+                                    <parameters>
+                                        <parameter>Healthdrop</parameter>
+                                        <parameter>CopyOfWall</parameter>
+                                        <parameter></parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="true" value="CollisionNP" />
+                                    <parameters>
+                                        <parameter>Healthdrop</parameter>
+                                        <parameter>Chair</parameter>
+                                        <parameter></parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="true" value="CollisionNP" />
+                                    <parameters>
+                                        <parameter>Healthdrop</parameter>
+                                        <parameter>Chair_2</parameter>
+                                        <parameter></parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="Montre" />
+                                    <parameters>
+                                        <parameter>Healthdrop</parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                    </events>
                 </event>
                 <event disabled="false" folded="false">
                     <type>BuiltinCommonInstructions::Standard</type>
@@ -21524,6 +21628,13 @@
                             <subActions />
                         </action>
                         <action>
+                            <type inverted="false" value="Cache" />
+                            <parameters>
+                                <parameter>Trap</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
                             <type inverted="false" value="ModVarScene" />
                             <parameters>
                                 <parameter>Trap</parameter>
@@ -21533,7 +21644,104 @@
                             <subActions />
                         </action>
                     </actions>
-                    <events />
+                    <events>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="true" value="CollisionNP" />
+                                    <parameters>
+                                        <parameter>Trap</parameter>
+                                        <parameter>Chair</parameter>
+                                        <parameter></parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="true" value="CollisionNP" />
+                                    <parameters>
+                                        <parameter>Trap</parameter>
+                                        <parameter>CopyOfWall</parameter>
+                                        <parameter></parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="true" value="CollisionNP" />
+                                    <parameters>
+                                        <parameter>Trap</parameter>
+                                        <parameter>Wall_lights</parameter>
+                                        <parameter></parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="true" value="CollisionNP" />
+                                    <parameters>
+                                        <parameter>Trap</parameter>
+                                        <parameter>Table</parameter>
+                                        <parameter></parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="true" value="CollisionNP" />
+                                    <parameters>
+                                        <parameter>Trap</parameter>
+                                        <parameter>Table3</parameter>
+                                        <parameter></parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="true" value="CollisionNP" />
+                                    <parameters>
+                                        <parameter>Trap</parameter>
+                                        <parameter>Chair_2</parameter>
+                                        <parameter></parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="true" value="CollisionNP" />
+                                    <parameters>
+                                        <parameter>Trap</parameter>
+                                        <parameter>Table2</parameter>
+                                        <parameter></parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                                <condition>
+                                    <type inverted="true" value="CollisionNP" />
+                                    <parameters>
+                                        <parameter>Trap</parameter>
+                                        <parameter>Wall</parameter>
+                                        <parameter></parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="Montre" />
+                                    <parameters>
+                                        <parameter>Trap</parameter>
+                                        <parameter></parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                    </events>
                 </event>
                 <event disabled="false" folded="false">
                     <type>BuiltinCommonInstructions::Standard</type>
@@ -21913,14 +22121,14 @@
                 <variable name="Trap" value="0" />
             </variables>
             <instances>
-                <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Player" width="160.000000" x="160.000000" y="149.000000" zOrder="3">
+                <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Player" width="160.000000" x="-5.999986" y="259.000000" zOrder="3">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables>
                         <variable name="nHit" value="0" />
                     </initialVariables>
                 </instance>
-                <instance angle="0.000000" customSize="true" height="448.000000" layer="" locked="true" name="Floor" width="736.000000" x="64.000015" y="128.000000" zOrder="-3">
+                <instance angle="0.000000" customSize="true" height="448.000000" layer="" locked="false" name="Floor" width="811.000000" x="-9.999977" y="132.000000" zOrder="-3">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -21940,7 +22148,7 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="416.000000" layer="" locked="true" name="Wall_lights" width="64.000000" x="0.000000" y="128.000000" zOrder="1">
+                <instance angle="0.000000" customSize="true" height="132.000000" layer="" locked="false" name="Wall_lights" width="61.000000" x="0.000000" y="412.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -21960,7 +22168,7 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Enemy" width="147.310349" x="160.000000" y="448.000000" zOrder="3">
+                <instance angle="0.000000" customSize="true" height="96.000000" layer="" locked="false" name="Enemy" width="147.310349" x="-5.999984" y="333.000000" zOrder="3">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables>
@@ -22103,6 +22311,11 @@
                     <initialVariables />
                 </instance>
                 <instance angle="0.000000" customSize="true" height="52.000000" layer="" locked="false" name="Chair_3" width="29.000000" x="564.000000" y="254.500000" zOrder="11">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+                <instance angle="0.000000" customSize="true" height="124.000000" layer="" locked="false" name="Wall_lights" width="61.000000" x="-0.999969" y="109.000000" zOrder="1">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
