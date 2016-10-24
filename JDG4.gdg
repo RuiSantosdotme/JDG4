@@ -325,6 +325,8 @@
         <variable name="PlayerScore" value="0" />
         <variable name="EnemyScore" value="0" />
         <variable name="DoorDestroyed" value="1" />
+        <variable name="P1Life" value="6" />
+        <variable name="P2Life" value="6" />
     </variables>
     <layouts>
         <layout b="209" disableInputWhenNotFocused="true" mangledName="Sala_32lvl1" name="Sala lvl1" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
@@ -413,12 +415,12 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Player1_ui" width="0.000000" x="85.000000" y="17.000000" zOrder="10">
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Player1_ui" width="0.000000" x="140.000000" y="54.000000" zOrder="10">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Player2_ui" width="0.000000" x="563.000000" y="17.000000" zOrder="8">
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="Player2_ui" width="0.000000" x="625.000000" y="56.000000" zOrder="8">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -483,42 +485,42 @@
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="16.000000" layer="" locked="false" name="Life_full_p1" width="54.000000" x="181.000000" y="17.000000" zOrder="10">
+                <instance angle="0.000000" customSize="true" height="16.000000" layer="" locked="false" name="Life_full_p2" width="54.000000" x="691.000000" y="18.000000" zOrder="11">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="16.000000" layer="" locked="false" name="Life_full_p2" width="54.000000" x="663.000000" y="18.000000" zOrder="11">
+                <instance angle="0.000000" customSize="true" height="32.000000" layer="" locked="false" name="p1_ui" width="224.000000" x="64.000000" y="11.000000" zOrder="2">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="32.000000" layer="" locked="false" name="p1_ui" width="192.000000" x="64.000000" y="11.000000" zOrder="2">
+                <instance angle="0.000000" customSize="true" height="32.000000" layer="" locked="false" name="p2_ui" width="224.000000" x="544.000000" y="11.000000" zOrder="2">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="32.000000" layer="" locked="false" name="p2_ui" width="192.000000" x="544.000000" y="11.000000" zOrder="2">
+                <instance angle="0.000000" customSize="true" height="32.000000" layer="" locked="false" name="p1_ui" width="224.000000" x="64.000000" y="48.000000" zOrder="2">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="32.000000" layer="" locked="false" name="p1_ui" width="192.000000" x="64.000000" y="48.000000" zOrder="2">
+                <instance angle="0.000000" customSize="true" height="32.000000" layer="" locked="false" name="p2_ui" width="224.000000" x="544.000000" y="49.000000" zOrder="2">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="true" height="32.000000" layer="" locked="false" name="p2_ui" width="192.000000" x="544.000000" y="49.000000" zOrder="2">
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="p2_score" width="0.000000" x="576.000000" y="17.000000" zOrder="12">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="p2_score" width="0.000000" x="602.000000" y="56.000000" zOrder="12">
+                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="p1_score" width="0.000000" x="96.000000" y="18.000000" zOrder="13">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
                 </instance>
-                <instance angle="0.000000" customSize="false" height="0.000000" layer="" locked="false" name="p1_score" width="0.000000" x="124.000000" y="55.000000" zOrder="13">
+                <instance angle="0.000000" customSize="true" height="16.000000" layer="" locked="false" name="Life_full_p2" width="54.000000" x="210.000000" y="19.000011" zOrder="11">
                     <numberProperties />
                     <stringProperties />
                     <initialVariables />
@@ -5105,7 +5107,7 @@
                 <object bold="false" italic="false" name="Player1_ui" smoothed="true" type="TextObject::Text" underlined="false">
                     <variables />
                     <behaviors />
-                    <string>Player 1</string>
+                    <string>0</string>
                     <font>font/visitor1.ttf</font>
                     <characterSize>20</characterSize>
                     <color b="255" g="255" r="255" />
@@ -5113,7 +5115,7 @@
                 <object bold="false" italic="false" name="Player2_ui" smoothed="true" type="TextObject::Text" underlined="false">
                     <variables />
                     <behaviors />
-                    <string>Player 2</string>
+                    <string>0</string>
                     <font>font/visitor1.ttf</font>
                     <characterSize>20</characterSize>
                     <color b="255" g="255" r="255" />
@@ -5238,7 +5240,7 @@
                 <object bold="false" italic="false" name="p1_score" smoothed="true" type="TextObject::Text" underlined="false">
                     <variables />
                     <behaviors />
-                    <string>1215657</string>
+                    <string>PLAYER 1</string>
                     <font>font/visitor1.ttf</font>
                     <characterSize>20</characterSize>
                     <color b="255" g="255" r="255" />
@@ -5246,10 +5248,199 @@
                 <object bold="false" italic="false" name="p2_score" smoothed="true" type="TextObject::Text" underlined="false">
                     <variables />
                     <behaviors />
-                    <string>1254984</string>
+                    <string>PLAYER 2</string>
                     <font>font/visitor1.ttf</font>
                     <characterSize>20</characterSize>
                     <color b="255" g="255" r="255" />
+                </object>
+                <object name="Life_6" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="6.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="27.000000" y="8.500000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="54.000000" y="0.000000" />
+                                                    <vertice x="54.000000" y="17.000000" />
+                                                    <vertice x="0.000000" y="17.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="Life_5" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="5.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="27.000000" y="8.500000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="54.000000" y="0.000000" />
+                                                    <vertice x="54.000000" y="17.000000" />
+                                                    <vertice x="0.000000" y="17.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="Life_4" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="4.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="27.000000" y="8.500000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="54.000000" y="0.000000" />
+                                                    <vertice x="54.000000" y="17.000000" />
+                                                    <vertice x="0.000000" y="17.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="Life_3" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="3.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="27.000000" y="8.500000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="54.000000" y="0.000000" />
+                                                    <vertice x="54.000000" y="17.000000" />
+                                                    <vertice x="0.000000" y="17.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="Life_2" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="2.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="27.000000" y="8.500000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="54.000000" y="0.000000" />
+                                                    <vertice x="54.000000" y="17.000000" />
+                                                    <vertice x="0.000000" y="17.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="Life_1" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="1.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="27.000000" y="8.500000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="54.000000" y="0.000000" />
+                                                    <vertice x="54.000000" y="17.000000" />
+                                                    <vertice x="0.000000" y="17.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+                <object name="Life_0" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="0.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="27.000000" y="8.500000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="54.000000" y="0.000000" />
+                                                    <vertice x="54.000000" y="17.000000" />
+                                                    <vertice x="0.000000" y="17.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
                 </object>
             </objects>
             <events>
@@ -5744,6 +5935,58 @@
                     <type>BuiltinCommonInstructions::Standard</type>
                     <conditions>
                         <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>Chair</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SeparateFromObjects" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>Chair</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>Chair_2</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SeparateFromObjects" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>Chair_2</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
                             <type inverted="false" value="KeyPressed" />
                             <parameters>
                                 <parameter></parameter>
@@ -6073,6 +6316,58 @@
                             <parameters>
                                 <parameter>Enemy</parameter>
                                 <parameter>Table3</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Chair</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SeparateFromObjects" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Chair</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="CollisionNP" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Chair_2</parameter>
+                                <parameter></parameter>
+                                <parameter></parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="SeparateFromObjects" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>Chair_2</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -7581,7 +7876,7 @@
                             <parameters>
                                 <parameter>Player1_ui</parameter>
                                 <parameter>=</parameter>
-                                <parameter>&quot;Player Score: &quot;+ToString(round(GlobalVariable(PlayerScore)))</parameter>
+                                <parameter>ToString(round(GlobalVariable(PlayerScore)))</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -7606,7 +7901,7 @@
                             <parameters>
                                 <parameter>Player2_ui</parameter>
                                 <parameter>=</parameter>
-                                <parameter>&quot;Enemy Score: &quot;+ToString(round(GlobalVariable(EnemyScore)))</parameter>
+                                <parameter>ToString(round(GlobalVariable(EnemyScore)))</parameter>
                             </parameters>
                             <subActions />
                         </action>
@@ -7861,6 +8156,15 @@
                                 <parameter>PlayerLife</parameter>
                                 <parameter>-</parameter>
                                 <parameter>25</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="ModVarGlobal" />
+                            <parameters>
+                                <parameter>P1Life</parameter>
+                                <parameter>-</parameter>
+                                <parameter>1</parameter>
                             </parameters>
                             <subActions />
                         </action>
