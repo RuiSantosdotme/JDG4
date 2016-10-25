@@ -10624,6 +10624,28 @@
                             </parameters>
                             <subActions />
                         </action>
+                        <action>
+                            <type inverted="false" value="PauseAnimation" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Dead&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
                     </actions>
                     <events>
                         <event disabled="false" folded="false">
@@ -10633,13 +10655,35 @@
                                     <type inverted="false" value="Timer" />
                                     <parameters>
                                         <parameter></parameter>
-                                        <parameter>3</parameter>
+                                        <parameter>5</parameter>
                                         <parameter>&quot;Stun&quot;</parameter>
                                     </parameters>
                                     <subConditions />
                                 </condition>
                             </conditions>
                             <actions>
+                                <action>
+                                    <type inverted="false" value="PauseAnimation" />
+                                    <parameters>
+                                        <parameter>Player</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="SetAnimationName" />
+                                    <parameters>
+                                        <parameter>Player</parameter>
+                                        <parameter>&quot;Walk&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PlayAnimation" />
+                                    <parameters>
+                                        <parameter>Player</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
                                 <action>
                                     <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
                                     <parameters>
@@ -10704,6 +10748,28 @@
                     </conditions>
                     <actions>
                         <action>
+                            <type inverted="false" value="PauseAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>&quot;Dead&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
                             <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
                             <parameters>
                                 <parameter>Enemy</parameter>
@@ -10730,13 +10796,35 @@
                                     <type inverted="false" value="Timer" />
                                     <parameters>
                                         <parameter></parameter>
-                                        <parameter>3</parameter>
+                                        <parameter>5</parameter>
                                         <parameter>&quot;StunEnemy&quot;</parameter>
                                     </parameters>
                                     <subConditions />
                                 </condition>
                             </conditions>
                             <actions>
+                                <action>
+                                    <type inverted="false" value="PauseAnimation" />
+                                    <parameters>
+                                        <parameter>Enemy</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="SetAnimationName" />
+                                    <parameters>
+                                        <parameter>Enemy</parameter>
+                                        <parameter>&quot;Walk&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PlayAnimation" />
+                                    <parameters>
+                                        <parameter>Enemy</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
                                 <action>
                                     <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
                                     <parameters>
@@ -15183,200 +15271,6 @@
                 </event>
                 <event disabled="false" folded="false">
                     <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions>
-                        <condition>
-                            <type inverted="false" value="VarScene" />
-                            <parameters>
-                                <parameter>nHitPlayer</parameter>
-                                <parameter>&gt;=</parameter>
-                                <parameter>100</parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action>
-                            <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
-                            <parameters>
-                                <parameter>Player</parameter>
-                                <parameter>TopDownMovement</parameter>
-                                <parameter>=</parameter>
-                                <parameter>0</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                        <action>
-                            <type inverted="false" value="UnPauseTimer" />
-                            <parameters>
-                                <parameter></parameter>
-                                <parameter>&quot;Stun&quot;</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                    </actions>
-                    <events>
-                        <event disabled="false" folded="false">
-                            <type>BuiltinCommonInstructions::Standard</type>
-                            <conditions>
-                                <condition>
-                                    <type inverted="false" value="Timer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>3</parameter>
-                                        <parameter>&quot;Stun&quot;</parameter>
-                                    </parameters>
-                                    <subConditions />
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action>
-                                    <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
-                                    <parameters>
-                                        <parameter>Player</parameter>
-                                        <parameter>TopDownMovement</parameter>
-                                        <parameter>=</parameter>
-                                        <parameter>400</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ModVarScene" />
-                                    <parameters>
-                                        <parameter>nHitPlayer</parameter>
-                                        <parameter>=</parameter>
-                                        <parameter>0</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ResetTimer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>&quot;Stun&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="PauseTimer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>&quot;Stun&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ModVarGlobal" />
-                                    <parameters>
-                                        <parameter>EnemyScore</parameter>
-                                        <parameter>+</parameter>
-                                        <parameter>350</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                            </actions>
-                            <events />
-                        </event>
-                    </events>
-                </event>
-                <event disabled="false" folded="false">
-                    <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions>
-                        <condition>
-                            <type inverted="false" value="VarScene" />
-                            <parameters>
-                                <parameter>nHitEnemy</parameter>
-                                <parameter>&gt;=</parameter>
-                                <parameter>100</parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action>
-                            <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
-                            <parameters>
-                                <parameter>Enemy</parameter>
-                                <parameter>TopDownMovement</parameter>
-                                <parameter>=</parameter>
-                                <parameter>0</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                        <action>
-                            <type inverted="false" value="UnPauseTimer" />
-                            <parameters>
-                                <parameter></parameter>
-                                <parameter>&quot;StunEnemy&quot;</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                    </actions>
-                    <events>
-                        <event disabled="false" folded="false">
-                            <type>BuiltinCommonInstructions::Standard</type>
-                            <conditions>
-                                <condition>
-                                    <type inverted="false" value="Timer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>3</parameter>
-                                        <parameter>&quot;StunEnemy&quot;</parameter>
-                                    </parameters>
-                                    <subConditions />
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action>
-                                    <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>TopDownMovement</parameter>
-                                        <parameter>=</parameter>
-                                        <parameter>400</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ModVarScene" />
-                                    <parameters>
-                                        <parameter>nHitEnemy</parameter>
-                                        <parameter>=</parameter>
-                                        <parameter>0</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ResetTimer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>&quot;StunEnemy&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="PauseTimer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>&quot;StunEnemy&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ModVarGlobal" />
-                                    <parameters>
-                                        <parameter>PlayerScore</parameter>
-                                        <parameter>+</parameter>
-                                        <parameter>350</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                            </actions>
-                            <events />
-                        </event>
-                    </events>
-                </event>
-                <event disabled="false" folded="false">
-                    <type>BuiltinCommonInstructions::Standard</type>
                     <conditions />
                     <actions>
                         <action>
@@ -15948,6 +15842,322 @@
                         </action>
                     </actions>
                     <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="VarGlobal" />
+                            <parameters>
+                                <parameter>EnemyLife</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="VarGlobal" />
+                            <parameters>
+                                <parameter>PlayerLife</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="PushScene" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;GameOver&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="VarScene" />
+                            <parameters>
+                                <parameter>nHitEnemy</parameter>
+                                <parameter>&gt;=</parameter>
+                                <parameter>100</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="PauseAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>&quot;Dead&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>TopDownMovement</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="UnPauseTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;StunEnemy&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="Timer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>5</parameter>
+                                        <parameter>&quot;StunEnemy&quot;</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="PauseAnimation" />
+                                    <parameters>
+                                        <parameter>Enemy</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="SetAnimationName" />
+                                    <parameters>
+                                        <parameter>Enemy</parameter>
+                                        <parameter>&quot;Walk&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PlayAnimation" />
+                                    <parameters>
+                                        <parameter>Enemy</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
+                                    <parameters>
+                                        <parameter>Enemy</parameter>
+                                        <parameter>TopDownMovement</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>400</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ModVarScene" />
+                                    <parameters>
+                                        <parameter>nHitEnemy</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>0</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ResetTimer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;StunEnemy&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PauseTimer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;StunEnemy&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ModVarGlobal" />
+                                    <parameters>
+                                        <parameter>PlayerScore</parameter>
+                                        <parameter>+</parameter>
+                                        <parameter>350</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                    </events>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="VarScene" />
+                            <parameters>
+                                <parameter>nHitPlayer</parameter>
+                                <parameter>&gt;=</parameter>
+                                <parameter>100</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>TopDownMovement</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="UnPauseTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;Stun&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PauseAnimation" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Dead&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="Timer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>5</parameter>
+                                        <parameter>&quot;Stun&quot;</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="PauseAnimation" />
+                                    <parameters>
+                                        <parameter>Player</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="SetAnimationName" />
+                                    <parameters>
+                                        <parameter>Player</parameter>
+                                        <parameter>&quot;Walk&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PlayAnimation" />
+                                    <parameters>
+                                        <parameter>Player</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
+                                    <parameters>
+                                        <parameter>Player</parameter>
+                                        <parameter>TopDownMovement</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>400</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ModVarScene" />
+                                    <parameters>
+                                        <parameter>nHitPlayer</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>0</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ResetTimer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;Stun&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PauseTimer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;Stun&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ModVarGlobal" />
+                                    <parameters>
+                                        <parameter>EnemyScore</parameter>
+                                        <parameter>+</parameter>
+                                        <parameter>350</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                    </events>
                 </event>
             </events>
             <layers>
@@ -19591,200 +19801,6 @@
                 </event>
                 <event disabled="false" folded="false">
                     <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions>
-                        <condition>
-                            <type inverted="false" value="VarScene" />
-                            <parameters>
-                                <parameter>nHitPlayer</parameter>
-                                <parameter>&gt;=</parameter>
-                                <parameter>100</parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action>
-                            <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
-                            <parameters>
-                                <parameter>Player</parameter>
-                                <parameter>TopDownMovement</parameter>
-                                <parameter>=</parameter>
-                                <parameter>0</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                        <action>
-                            <type inverted="false" value="UnPauseTimer" />
-                            <parameters>
-                                <parameter></parameter>
-                                <parameter>&quot;Stun&quot;</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                    </actions>
-                    <events>
-                        <event disabled="false" folded="false">
-                            <type>BuiltinCommonInstructions::Standard</type>
-                            <conditions>
-                                <condition>
-                                    <type inverted="false" value="Timer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>3</parameter>
-                                        <parameter>&quot;Stun&quot;</parameter>
-                                    </parameters>
-                                    <subConditions />
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action>
-                                    <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
-                                    <parameters>
-                                        <parameter>Player</parameter>
-                                        <parameter>TopDownMovement</parameter>
-                                        <parameter>=</parameter>
-                                        <parameter>400</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ModVarScene" />
-                                    <parameters>
-                                        <parameter>nHitPlayer</parameter>
-                                        <parameter>=</parameter>
-                                        <parameter>0</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ResetTimer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>&quot;Stun&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="PauseTimer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>&quot;Stun&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ModVarGlobal" />
-                                    <parameters>
-                                        <parameter>EnemyScore</parameter>
-                                        <parameter>+</parameter>
-                                        <parameter>350</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                            </actions>
-                            <events />
-                        </event>
-                    </events>
-                </event>
-                <event disabled="false" folded="false">
-                    <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions>
-                        <condition>
-                            <type inverted="false" value="VarScene" />
-                            <parameters>
-                                <parameter>nHitEnemy</parameter>
-                                <parameter>&gt;=</parameter>
-                                <parameter>100</parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action>
-                            <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
-                            <parameters>
-                                <parameter>Enemy</parameter>
-                                <parameter>TopDownMovement</parameter>
-                                <parameter>=</parameter>
-                                <parameter>0</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                        <action>
-                            <type inverted="false" value="UnPauseTimer" />
-                            <parameters>
-                                <parameter></parameter>
-                                <parameter>&quot;StunEnemy&quot;</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                    </actions>
-                    <events>
-                        <event disabled="false" folded="false">
-                            <type>BuiltinCommonInstructions::Standard</type>
-                            <conditions>
-                                <condition>
-                                    <type inverted="false" value="Timer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>3</parameter>
-                                        <parameter>&quot;StunEnemy&quot;</parameter>
-                                    </parameters>
-                                    <subConditions />
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action>
-                                    <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>TopDownMovement</parameter>
-                                        <parameter>=</parameter>
-                                        <parameter>400</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ModVarScene" />
-                                    <parameters>
-                                        <parameter>nHitEnemy</parameter>
-                                        <parameter>=</parameter>
-                                        <parameter>0</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ResetTimer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>&quot;StunEnemy&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="PauseTimer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>&quot;StunEnemy&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ModVarGlobal" />
-                                    <parameters>
-                                        <parameter>PlayerScore</parameter>
-                                        <parameter>+</parameter>
-                                        <parameter>350</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                            </actions>
-                            <events />
-                        </event>
-                    </events>
-                </event>
-                <event disabled="false" folded="false">
-                    <type>BuiltinCommonInstructions::Standard</type>
                     <conditions />
                     <actions>
                         <action>
@@ -20244,6 +20260,288 @@
                         </action>
                     </actions>
                     <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="VarScene" />
+                            <parameters>
+                                <parameter>nHitEnemy</parameter>
+                                <parameter>&gt;=</parameter>
+                                <parameter>100</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="PauseAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>&quot;Dead&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>TopDownMovement</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="UnPauseTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;StunEnemy&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="Timer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>5</parameter>
+                                        <parameter>&quot;StunEnemy&quot;</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="PauseAnimation" />
+                                    <parameters>
+                                        <parameter>Enemy</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="SetAnimationName" />
+                                    <parameters>
+                                        <parameter>Enemy</parameter>
+                                        <parameter>&quot;Walk&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PlayAnimation" />
+                                    <parameters>
+                                        <parameter>Enemy</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
+                                    <parameters>
+                                        <parameter>Enemy</parameter>
+                                        <parameter>TopDownMovement</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>400</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ModVarScene" />
+                                    <parameters>
+                                        <parameter>nHitEnemy</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>0</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ResetTimer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;StunEnemy&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PauseTimer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;StunEnemy&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ModVarGlobal" />
+                                    <parameters>
+                                        <parameter>PlayerScore</parameter>
+                                        <parameter>+</parameter>
+                                        <parameter>350</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                    </events>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="VarScene" />
+                            <parameters>
+                                <parameter>nHitPlayer</parameter>
+                                <parameter>&gt;=</parameter>
+                                <parameter>100</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>TopDownMovement</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="UnPauseTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;Stun&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PauseAnimation" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Dead&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="Timer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>5</parameter>
+                                        <parameter>&quot;Stun&quot;</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="PauseAnimation" />
+                                    <parameters>
+                                        <parameter>Player</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="SetAnimationName" />
+                                    <parameters>
+                                        <parameter>Player</parameter>
+                                        <parameter>&quot;Walk&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PlayAnimation" />
+                                    <parameters>
+                                        <parameter>Player</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
+                                    <parameters>
+                                        <parameter>Player</parameter>
+                                        <parameter>TopDownMovement</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>400</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ModVarScene" />
+                                    <parameters>
+                                        <parameter>nHitPlayer</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>0</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ResetTimer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;Stun&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PauseTimer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;Stun&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ModVarGlobal" />
+                                    <parameters>
+                                        <parameter>EnemyScore</parameter>
+                                        <parameter>+</parameter>
+                                        <parameter>350</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                    </events>
                 </event>
             </events>
             <layers>
@@ -21871,7 +22169,9 @@
                     </animations>
                 </object>
                 <object name="Skull" type="Sprite">
-                    <variables />
+                    <variables>
+                        <variable name="Life" value="100" />
+                    </variables>
                     <behaviors>
                         <behavior acceleration="400.000000" allowDiagonals="true" angleOffset="0.000000" angularMaxSpeed="180.000000" cellHeight="20" cellWidth="20" extraBorder="0.000000" maxSpeed="200.000000" name="Pathfinding" rotateObject="true" type="PathfindingBehavior::PathfindingBehavior" />
                     </behaviors>
@@ -24594,200 +24894,6 @@
                 </event>
                 <event disabled="false" folded="false">
                     <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions>
-                        <condition>
-                            <type inverted="false" value="VarScene" />
-                            <parameters>
-                                <parameter>nHitPlayer</parameter>
-                                <parameter>&gt;=</parameter>
-                                <parameter>100</parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action>
-                            <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
-                            <parameters>
-                                <parameter>Player</parameter>
-                                <parameter>TopDownMovement</parameter>
-                                <parameter>=</parameter>
-                                <parameter>0</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                        <action>
-                            <type inverted="false" value="UnPauseTimer" />
-                            <parameters>
-                                <parameter></parameter>
-                                <parameter>&quot;Stun&quot;</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                    </actions>
-                    <events>
-                        <event disabled="false" folded="false">
-                            <type>BuiltinCommonInstructions::Standard</type>
-                            <conditions>
-                                <condition>
-                                    <type inverted="false" value="Timer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>3</parameter>
-                                        <parameter>&quot;Stun&quot;</parameter>
-                                    </parameters>
-                                    <subConditions />
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action>
-                                    <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
-                                    <parameters>
-                                        <parameter>Player</parameter>
-                                        <parameter>TopDownMovement</parameter>
-                                        <parameter>=</parameter>
-                                        <parameter>400</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ModVarScene" />
-                                    <parameters>
-                                        <parameter>nHitPlayer</parameter>
-                                        <parameter>=</parameter>
-                                        <parameter>0</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ResetTimer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>&quot;Stun&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="PauseTimer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>&quot;Stun&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ModVarGlobal" />
-                                    <parameters>
-                                        <parameter>EnemyScore</parameter>
-                                        <parameter>+</parameter>
-                                        <parameter>350</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                            </actions>
-                            <events />
-                        </event>
-                    </events>
-                </event>
-                <event disabled="false" folded="false">
-                    <type>BuiltinCommonInstructions::Standard</type>
-                    <conditions>
-                        <condition>
-                            <type inverted="false" value="VarScene" />
-                            <parameters>
-                                <parameter>nHitEnemy</parameter>
-                                <parameter>&gt;=</parameter>
-                                <parameter>100</parameter>
-                            </parameters>
-                            <subConditions />
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action>
-                            <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
-                            <parameters>
-                                <parameter>Enemy</parameter>
-                                <parameter>TopDownMovement</parameter>
-                                <parameter>=</parameter>
-                                <parameter>0</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                        <action>
-                            <type inverted="false" value="UnPauseTimer" />
-                            <parameters>
-                                <parameter></parameter>
-                                <parameter>&quot;StunEnemy&quot;</parameter>
-                            </parameters>
-                            <subActions />
-                        </action>
-                    </actions>
-                    <events>
-                        <event disabled="false" folded="false">
-                            <type>BuiltinCommonInstructions::Standard</type>
-                            <conditions>
-                                <condition>
-                                    <type inverted="false" value="Timer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>3</parameter>
-                                        <parameter>&quot;StunEnemy&quot;</parameter>
-                                    </parameters>
-                                    <subConditions />
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action>
-                                    <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
-                                    <parameters>
-                                        <parameter>Enemy</parameter>
-                                        <parameter>TopDownMovement</parameter>
-                                        <parameter>=</parameter>
-                                        <parameter>400</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ModVarScene" />
-                                    <parameters>
-                                        <parameter>nHitEnemy</parameter>
-                                        <parameter>=</parameter>
-                                        <parameter>0</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ResetTimer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>&quot;StunEnemy&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="PauseTimer" />
-                                    <parameters>
-                                        <parameter></parameter>
-                                        <parameter>&quot;StunEnemy&quot;</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                                <action>
-                                    <type inverted="false" value="ModVarGlobal" />
-                                    <parameters>
-                                        <parameter>PlayerScore</parameter>
-                                        <parameter>+</parameter>
-                                        <parameter>350</parameter>
-                                    </parameters>
-                                    <subActions />
-                                </action>
-                            </actions>
-                            <events />
-                        </event>
-                    </events>
-                </event>
-                <event disabled="false" folded="false">
-                    <type>BuiltinCommonInstructions::Standard</type>
                     <conditions />
                     <actions>
                         <action>
@@ -25377,6 +25483,322 @@
                         </action>
                     </actions>
                     <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="VarGlobal" />
+                            <parameters>
+                                <parameter>EnemyLife</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="VarGlobal" />
+                            <parameters>
+                                <parameter>PlayerLife</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="PushScene" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;GameOver&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="VarScene" />
+                            <parameters>
+                                <parameter>nHitEnemy</parameter>
+                                <parameter>&gt;=</parameter>
+                                <parameter>100</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="PauseAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>&quot;Dead&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
+                            <parameters>
+                                <parameter>Enemy</parameter>
+                                <parameter>TopDownMovement</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="UnPauseTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;StunEnemy&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="Timer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>5</parameter>
+                                        <parameter>&quot;StunEnemy&quot;</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="PauseAnimation" />
+                                    <parameters>
+                                        <parameter>Enemy</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="SetAnimationName" />
+                                    <parameters>
+                                        <parameter>Enemy</parameter>
+                                        <parameter>&quot;Walk&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PlayAnimation" />
+                                    <parameters>
+                                        <parameter>Enemy</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
+                                    <parameters>
+                                        <parameter>Enemy</parameter>
+                                        <parameter>TopDownMovement</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>400</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ModVarScene" />
+                                    <parameters>
+                                        <parameter>nHitEnemy</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>0</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ResetTimer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;StunEnemy&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PauseTimer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;StunEnemy&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ModVarGlobal" />
+                                    <parameters>
+                                        <parameter>PlayerScore</parameter>
+                                        <parameter>+</parameter>
+                                        <parameter>350</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                    </events>
+                </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="VarScene" />
+                            <parameters>
+                                <parameter>nHitPlayer</parameter>
+                                <parameter>&gt;=</parameter>
+                                <parameter>100</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>TopDownMovement</parameter>
+                                <parameter>=</parameter>
+                                <parameter>0</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="UnPauseTimer" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;Stun&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PauseAnimation" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="SetAnimationName" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                                <parameter>&quot;Dead&quot;</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                        <action>
+                            <type inverted="false" value="PlayAnimation" />
+                            <parameters>
+                                <parameter>Player</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events>
+                        <event disabled="false" folded="false">
+                            <type>BuiltinCommonInstructions::Standard</type>
+                            <conditions>
+                                <condition>
+                                    <type inverted="false" value="Timer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>5</parameter>
+                                        <parameter>&quot;Stun&quot;</parameter>
+                                    </parameters>
+                                    <subConditions />
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action>
+                                    <type inverted="false" value="PauseAnimation" />
+                                    <parameters>
+                                        <parameter>Player</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="SetAnimationName" />
+                                    <parameters>
+                                        <parameter>Player</parameter>
+                                        <parameter>&quot;Walk&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PlayAnimation" />
+                                    <parameters>
+                                        <parameter>Player</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="TopDownMovementBehavior::Acceleration" />
+                                    <parameters>
+                                        <parameter>Player</parameter>
+                                        <parameter>TopDownMovement</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>400</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ModVarScene" />
+                                    <parameters>
+                                        <parameter>nHitPlayer</parameter>
+                                        <parameter>=</parameter>
+                                        <parameter>0</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ResetTimer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;Stun&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="PauseTimer" />
+                                    <parameters>
+                                        <parameter></parameter>
+                                        <parameter>&quot;Stun&quot;</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                                <action>
+                                    <type inverted="false" value="ModVarGlobal" />
+                                    <parameters>
+                                        <parameter>EnemyScore</parameter>
+                                        <parameter>+</parameter>
+                                        <parameter>350</parameter>
+                                    </parameters>
+                                    <subActions />
+                                </action>
+                            </actions>
+                            <events />
+                        </event>
+                    </events>
                 </event>
             </events>
             <layers>
@@ -29579,12 +30001,96 @@
                                         <sprite hasCustomCollisionMask="false" image="P1win.png">
                                             <points />
                                             <originPoint name="origine" x="0.000000" y="0.000000" />
-                                            <centerPoint automatic="true" name="centre" x="400.000000" y="300.000000" />
+                                            <centerPoint automatic="true" name="centre" x="0.000000" y="0.000000" />
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="800.000000" y="0.000000" />
-                                                    <vertice x="800.000000" y="600.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                </polygon>
+                                            </customCollisionMask>
+                                        </sprite>
+                                    </sprites>
+                                </direction>
+                            </directions>
+                        </animation>
+                    </animations>
+                </object>
+            </objects>
+            <events>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions>
+                        <condition>
+                            <type inverted="false" value="KeyReleased" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>Space</parameter>
+                            </parameters>
+                            <subConditions />
+                        </condition>
+                        <condition>
+                            <type inverted="false" value="BuiltinCommonInstructions::Once" />
+                            <parameters />
+                            <subConditions />
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action>
+                            <type inverted="false" value="Scene" />
+                            <parameters>
+                                <parameter></parameter>
+                                <parameter>&quot;StartScreen&quot;</parameter>
+                                <parameter>true</parameter>
+                            </parameters>
+                            <subActions />
+                        </action>
+                    </actions>
+                    <events />
+                </event>
+            </events>
+            <layers>
+                <layer name="" visibility="true">
+                    <cameras>
+                        <camera defaultSize="true" defaultViewport="true" height="0.000000" viewportBottom="1.000000" viewportLeft="0.000000" viewportRight="1.000000" viewportTop="0.000000" width="0.000000" />
+                    </cameras>
+                    <effects />
+                </layer>
+            </layers>
+            <behaviorsSharedData>
+                <behaviorSharedData name="TopDownMovement" type="TopDownMovementBehavior::TopDownMovementBehavior" />
+            </behaviorsSharedData>
+        </layout>
+        <layout b="209" disableInputWhenNotFocused="true" mangledName="GameOver" name="GameOver" oglFOV="90.000000" oglZFar="500.000000" oglZNear="1.000000" r="209" standardSortMethod="true" stopSoundsOnStartup="true" title="" v="209">
+            <uiSettings grid="false" gridB="255" gridG="180" gridHeight="32" gridOffsetX="0" gridOffsetY="0" gridR="158" gridWidth="32" snap="true" windowMask="false" zoomFactor="1.000000" />
+            <objectsGroups />
+            <variables />
+            <instances>
+                <instance angle="0.000000" customSize="true" height="600.000000" layer="" locked="false" name="Background" width="800.000000" x="-1.000000" y="1.000000" zOrder="-3">
+                    <numberProperties />
+                    <stringProperties />
+                    <initialVariables />
+                </instance>
+            </instances>
+            <objects>
+                <object name="Background" type="Sprite">
+                    <variables />
+                    <behaviors />
+                    <animations>
+                        <animation name="" useMultipleDirections="false">
+                            <directions>
+                                <direction looping="false" timeBetweenFrames="1.000000">
+                                    <sprites>
+                                        <sprite hasCustomCollisionMask="false" image="gameover.png">
+                                            <points />
+                                            <originPoint name="origine" x="0.000000" y="0.000000" />
+                                            <centerPoint automatic="true" name="centre" x="400.500000" y="300.000000" />
+                                            <customCollisionMask>
+                                                <polygon>
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="801.000000" y="0.000000" />
+                                                    <vertice x="801.000000" y="600.000000" />
                                                     <vertice x="0.000000" y="600.000000" />
                                                 </polygon>
                                             </customCollisionMask>
@@ -29663,13 +30169,13 @@
                                         <sprite hasCustomCollisionMask="false" image="P2win.png">
                                             <points />
                                             <originPoint name="origine" x="0.000000" y="0.000000" />
-                                            <centerPoint automatic="true" name="centre" x="400.500000" y="300.000000" />
+                                            <centerPoint automatic="true" name="centre" x="0.000000" y="0.000000" />
                                             <customCollisionMask>
                                                 <polygon>
                                                     <vertice x="0.000000" y="0.000000" />
-                                                    <vertice x="801.000000" y="0.000000" />
-                                                    <vertice x="801.000000" y="600.000000" />
-                                                    <vertice x="0.000000" y="600.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
+                                                    <vertice x="0.000000" y="0.000000" />
                                                 </polygon>
                                             </customCollisionMask>
                                         </sprite>
